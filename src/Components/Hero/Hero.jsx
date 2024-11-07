@@ -4,31 +4,29 @@ import profile from "../../assets/profile.png";
 import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
-import ReactPlayer from "react-player";
-
+import coverSVG from "../../assets/coverSVG.svg";
 const Hero = () => {
   // const [follower,setFollower]=useState()
   const [hoveredIcon, setHoveredIcon] = useState(null);
   return (
     <div className="flex flex-col shadow-sm border-[#262626]">
+      {/* Hero SVG/ video*/}
       <div className="overflow-hidden w-full">
-        <div className="w-full overflow-y-hidden">
-          <ReactPlayer
-            url={cover} // Path to your video
-            playing
-            loop
-            muted
-            width="100%"
-            height="100%"
-            className=" top-0 left-0"
-          />
-          {/* <video src={cover} autoPlay muted className="w-full h-full" /> */}
+        {/* Desktop view .MP4 */}
+        <div className="w-full hidden md:block overflow-y-hidden">
+          <video src={cover} autoPlay muted className="w-full h-full" />
+        </div>
+        {/* mobile view SVG */}
+        <div className="w-full block md:hidden overflow-y-hidden rounded-t-md">
+          <img src={coverSVG} alt="" className="rounded-t-md" />
         </div>
       </div>
+
+      {/* hero container */}
       <div
         className="h-52 border rounded-b-3xl p-3 relative border-gray-600"
         style={{
-          boxShadow: "0 -1px 20px rgba(255, 255, 255, 0.3)",
+          boxShadow: "0 -1px 8px rgba(255, 255, 255, 0.3)",
         }}
       >
         {/* profile */}
