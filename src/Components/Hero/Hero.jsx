@@ -4,6 +4,7 @@ import profile from "../../assets/profile.png";
 import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
+import ReactPlayer from "react-player";
 
 const Hero = () => {
   // const [follower,setFollower]=useState()
@@ -12,7 +13,16 @@ const Hero = () => {
     <div className="flex flex-col shadow-sm border-[#262626]">
       <div className="overflow-hidden w-full">
         <div className="w-full overflow-y-hidden">
-          <video src={cover} autoPlay muted className="w-full h-full" />
+          <ReactPlayer
+            url={cover} // Path to your video
+            playing
+            loop
+            muted
+            width="100%"
+            height="100%"
+            className=" top-0 left-0"
+          />
+          {/* <video src={cover} autoPlay muted className="w-full h-full" /> */}
         </div>
       </div>
       <div
