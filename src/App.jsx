@@ -1,15 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-
+import { Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import { Projects } from "./Pages/Projects";
+import Blogs from "./Pages/Blogs";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1 className="bg-red-500">Hello</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blogs" element={<Blogs />} />
+      </Route>
+    </Routes>
   );
 }
 

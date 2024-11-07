@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Fira Code", monospace;
+}
+
+* {
+  font-family: "Fira Code", monospace;
+}
+
+/* Or apply it to specific code elements */
+code,
+pre {
+  font-family: "Fira Code", monospace;
+}
