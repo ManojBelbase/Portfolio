@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import cover from "../../assets/cover.mp4";
-import Profile from "../../assets/ProfilePng.png";
-
-import { FaUserPlus } from "react-icons/fa";
+import Profile from "../../assets/Profile.png";
 import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
