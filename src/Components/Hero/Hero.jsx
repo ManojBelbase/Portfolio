@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cover from "../../assets/cover.mp4";
-import Profile from "../../assets/Profile.png";
+import profile from "../../assets/profile.png";
 import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
@@ -24,7 +24,7 @@ const Hero = () => {
         {/* profile */}
         <div className="md:h-44 md:w-44 h-28 w-28 md:-top-20 -top-14 left-6 absolute rounded-full border-2 border-secondary p-1">
           <img
-            src={Profile}
+            src={profile}
             alt="profile"
             className="h-full w-full rounded-full object-cover"
           />
