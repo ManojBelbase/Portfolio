@@ -52,6 +52,7 @@ const ProjectContainer = () => {
               return <ProjectCard item={item} key={i} />;
             })}
       </div>
+      {/* view more button display in mobile view */}
       <div className="md:hidden block">
         {location.pathname !== hideViewMoreBtn && (
           <button

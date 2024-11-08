@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`lg:mx-28 md:mx-24 sm:mx-6 mx-6 my-5 bg-[#1E2226] rounded-md md:rounded-full px-2 py-2 md:border border-gray-400`}
+      className={`lg:mx-24 md:mx-16 sm:mx-6 mx-6 my-5 bg-[#1E2226] rounded-md md:rounded-full px-2 py-2 md:border border-gray-400`}
     >
       <div className="flex items-center justify-between">
         <div
@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop View */}
-        <ul className="hidden md:flex bg-white border rounded-full md:h-14 h-10 items-center justify-between px-2 lg:gap-6 md:gap-4 lowercase">
+        <ul className="hidden md:flex bg-white border rounded-full md:h-14 h-10 items-center  px-2 lg:gap-4 md:gap-2 lowercase">
           {navItems.map((item, i) => (
             <li
               key={i}
@@ -54,8 +54,8 @@ const Navbar = () => {
               <NavLink
                 className={({ isActive }) =>
                   isActive
-                    ? "border-blue-400 md:px-6 md:py-2 px-3 py-1 bg-primary text-white rounded-full"
-                    : "text-black px-6 py-2"
+                    ? "border-blue-400 md:px-4 md:py-2 px-3 py-1 bg-primary text-white rounded-full"
+                    : "text-black px-3 py-1"
                 }
                 to={item.path}
               >
