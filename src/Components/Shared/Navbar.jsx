@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi"; // Import icons for hamburger and close
 import logo from "../../assets/logo.png";
+import UserProfile from "./UserProfile";
 
 const navItems = [
   {
@@ -40,6 +41,7 @@ const Navbar = () => {
         <div
           className="md:h-14 h-10 rounded-full cursor-pointer"
           onClick={() => navigate("/")}
+          onDoubleClick={() => navigate("/login")}
         >
           <img src={logo} className="h-full rounded-full" alt="Logo" />
         </div>

@@ -43,6 +43,7 @@ const ProjectContainer = () => {
           )}
         </div>
       </div>
+      {/* displaying card */}
       <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 mt-3">
         {location.pathname !== hideViewMoreBtn
           ? projectData.slice(0, 3).map((item, i) => {

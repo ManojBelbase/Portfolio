@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { blogsData } from "./BlogsData";
 import BlogCard from "./BlogCard";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -9,8 +9,32 @@ const BlogsContainer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const hideBlogsPath = "/blogs";
+
+  // displaying 4 blogs when screen size is greater than 1500px
+  const [blogsCount, setBlogsCount] = useState(3);
+  useEffect(() => {
+    const updateBlogsCount = () => {
+      if (window.innerWidth >= 1536) {
+        setBlogsCount(4);
+      } else {
+        setBlogsCount(3);
+      }
+    };
+    updateBlogsCount();
+    window.addEventListener("resize", updateBlogsCount);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", updateBlogsCount);
+    };
+  }, []);
+
   return (
-    <div className="border md:p-6 p-4 rounded-md  flex flex-col gap-5">
+    <div
+      className={`${
+        location.pathname !== hideBlogsPath && "border md:p-6 p-4 "
+      } rounded-md  flex flex-col gap-5`}
+    >
       <div className="flex items-center justify-between">
         {location.pathname !== hideBlogsPath && (
           <div className="w-[80%]  flex items-center gap-2">
@@ -38,11 +62,11 @@ const BlogsContainer = () => {
           </button>
         )}
       </div>
-      {/* Displaying  */}
+      {/* Displaying in home and project page */}
       <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5">
         {blogsData.length > 0 && location.pathname !== hideBlogsPath
           ? blogsData
-              .slice(0, 3)
+              .slice(0, blogsCount)
               .map((blog, i) => <BlogCard key={i} blog={blog} />)
           : blogsData.map((blog, key) => {
               return <BlogCard key={key} blog={blog} />;

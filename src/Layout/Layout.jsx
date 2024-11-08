@@ -29,7 +29,6 @@ const Layout = () => {
         <Outlet />
       </div>
       <Footer />
-
       {/* scroll to top icon */}
       {isVisible && (
         <Link
