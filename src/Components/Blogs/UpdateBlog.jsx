@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { doc, getDoc, setDoc, Timestamp } from "firebase/firestore";
 import { fireDB } from "../../firebase/FirebaseConfig";
 import toast from "react-hot-toast";
-import { data } from "autoprefixer";
 
 const UpdateBlog = () => {
   const { loading, setLoading, getAllBlogsFunction } = useContext(myContext);
@@ -55,11 +54,12 @@ const UpdateBlog = () => {
   };
 
   // update Blog function
-  const handleUpdateBlog = async () => {
+  const handleUpdateBlog = async (e) => {
+    e.preventDefault(); // Prevent form from refreshing the page
     setLoading(true);
     try {
       await setDoc(doc(fireDB, "blog", id), blog);
-      toast.success("Blog update successfully");
+      toast.success("Blog updated successfully");
       getAllBlogsFunction();
       setLoading(false);
       navigate(`/`);
@@ -68,13 +68,15 @@ const UpdateBlog = () => {
       setLoading(false);
     }
   };
+
   useEffect(() => {
     getSingleBlogFunction();
   }, []);
+
   return (
     <div className="p-4 min-w-lg mx-auto bg-primary rounded-md border shadow-lg text-gray-100">
       <h2 className="text-2xl font-bold mb-6 text-center">Update Blog</h2>
-      <form className="space-y-4">
+      <form className="space-y-4" onSubmit={handleUpdateBlog}>
         {/* Title */}
         <div>
           <label className="block text-gray-300">Title</label>
@@ -86,7 +88,7 @@ const UpdateBlog = () => {
             className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100"
           />
         </div>
-        {/* Category */}{" "}
+        {/* Category */}
         <div>
           <label className="block text-gray-300">Category</label>
           <input
@@ -119,7 +121,7 @@ const UpdateBlog = () => {
             className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100"
           />
         </div>
-        {/*  Description*/}
+        {/* Description */}
         <div>
           <label className="block text-gray-300">Description</label>
           <textarea
@@ -127,12 +129,11 @@ const UpdateBlog = () => {
             value={blog.description}
             onChange={handleInputChange}
             placeholder="Enter blog description"
-            className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100 h-24 resize-none"
+            className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100"
           />
         </div>
         <button
           type="submit"
-          onClick={handleUpdateBlog}
           className="w-full bg-[#21d764] text-white p-2 rounded hover:bg-secondary transition"
           disabled={loading}
         >

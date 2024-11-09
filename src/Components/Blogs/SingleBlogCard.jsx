@@ -1,14 +1,31 @@
 import React from "react";
-import { FaEdit, FaTrashAlt } from "react-icons/fa"; // import icons
+import { FaEdit, FaTrashAlt } from "react-icons/fa"; // Import icons
 import { useNavigate } from "react-router-dom";
+import useDeleteBlog from "./useDeleteBlog";
 
 const SingleBlogCard = ({ blog }) => {
   const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("users"));
+  const { deleteBlog, loading } = useDeleteBlog();
+
+  // Log the blog to check the description field
+  console.log(blog);
+
+  // Ensure we're properly accessing description and splitting it
+  const description = blog?.description[0]; // Assuming the description is stored in an array
+  const descriptionParagraphs = description
+    ? description.split("\\n").map((paragraph, index) => (
+        <p key={index} className="mb-4 text-accent">
+          {paragraph}
+        </p>
+      ))
+    : ["Description not available"];
+
   return (
-    <div className="min-h-screen p-2 border rounded-md bg-primary text-gray-100 flex flex-col items-center">
-      <div className="min-w-3xl w-full bg-primary rounded-lg shadow-lg overflow-hidden relative">
+    <div className="min-h-screen p-1 rounded-md text-gray-100 flex flex-col items-center">
+      <div className="border max-w-3xl w-full bg-primary rounded-md shadow-lg overflow-hidden relative">
         {/* Blog Image */}
-        <div className="h-64 md:h-80 lg:h-[500px] overflow-hidden">
+        <div className="h-64 md:h-80 lg:h-96 overflow-hidden">
           <img
             src={blog?.image}
             alt={blog?.title}
@@ -47,23 +64,35 @@ const SingleBlogCard = ({ blog }) => {
           </div>
 
           {/* Description */}
-          <div className="mt-2">
-            <p className="text-accent">{blog.description}</p>
+          <div className="blog-description mt-2">
+            {descriptionParagraphs.length > 0 ? (
+              descriptionParagraphs
+            ) : (
+              <p>No description available</p>
+            )}
           </div>
         </div>
 
         {/* Edit and Delete Buttons (only visible for admin) */}
-        <div className="md:px-6 py-2 px-2 flex gap-2">
-          <button
-            className="p-2 bg-secondary rounded-full text-gray-100 hover:bg-gray-600"
-            onClick={() => navigate(`/blog/update/${blog.id}`)}
-          >
-            <FaEdit />
-          </button>
-          <button className="p-2 bg-red-500 rounded-full text-gray-100 hover:bg-gray-600">
-            <FaTrashAlt />
-          </button>
-        </div>
+        {user && (
+          <div className="md:px-6 py-2 px-2 flex gap-2">
+            <button
+              className="p-2 bg-secondary rounded-full text-gray-100 hover:bg-gray-600"
+              onClick={() => navigate(`/blog/update/${blog.id}`)}
+            >
+              <FaEdit />
+            </button>
+
+            {/* Delete Blog */}
+            <button
+              className="p-2 bg-red-500 rounded-full text-gray-100 hover:bg-gray-600"
+              onClick={() => deleteBlog(blog?.id)}
+              disabled={loading}
+            >
+              <FaTrashAlt />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

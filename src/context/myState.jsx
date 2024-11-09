@@ -5,7 +5,6 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 const MyState = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [getAllBlogs, setGetAllBlogs] = useState([]);
-  console.log(getAllBlogs);
   // Getting all blogs
   const getAllBlogsFunction = async () => {
     setLoading(true);

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import myContext from "../../context/myContext";
 import { useNavigate } from "react-router-dom";
-import { serverTimestamp, Timestamp } from "firebase/firestore"; // Import serverTimestamp
+import { serverTimestamp } from "firebase/firestore"; // Import serverTimestamp
 import toast from "react-hot-toast";
 import { fireDB } from "../../firebase/FirebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
@@ -16,7 +16,6 @@ const AddBlog = () => {
     description: "",
     image: "",
     author: "",
-
     date: new Date().toLocaleString("en-US", {
       month: "short",
       day: "2-digit",
@@ -32,7 +31,7 @@ const AddBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // validation
+    // Validation
     if (
       formData.title === "" ||
       formData.category === "" ||
@@ -48,6 +47,7 @@ const AddBlog = () => {
       const blogRef = collection(fireDB, "blog");
       await addDoc(blogRef, {
         ...formData,
+        description: formData.description.split("\n"), // Split description into paragraphs
         time: serverTimestamp(), // Use server-generated timestamp here
       });
       toast.success("Blog added successfully");
@@ -76,6 +76,7 @@ const AddBlog = () => {
             className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100"
           />
         </div>
+
         {/* Category */}
         <div>
           <label className="block text-gray-300">Category</label>
@@ -88,17 +89,19 @@ const AddBlog = () => {
             className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100"
           />
         </div>
+
         {/* Description */}
         <div>
-          <label className="block text-gray-300">Description</label>
+          <label className="block text-gray-300 ">Description</label>
           <textarea
             name="description"
             value={formData.description}
             onChange={handleChange}
             placeholder="Enter blog description"
-            className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100 h-24 resize-none"
+            className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100 min-h-24 resize-y"
           />
         </div>
+
         {/* Image URL */}
         <div>
           <label className="block text-gray-300">Image URL</label>
@@ -111,6 +114,7 @@ const AddBlog = () => {
             className="w-full p-2 border border-gray-700 rounded bg-black text-gray-100"
           />
         </div>
+
         {/* Author */}
         <div>
           <label className="block text-gray-300">Author</label>

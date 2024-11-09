@@ -19,7 +19,7 @@ const SingleBlogContainer = () => {
           <span>Back</span>
         </div>
       </div>
-      <div>
+      <div className=" ">
         {getAllBlogs.length > 0 &&
           getAllBlogs.map((blog) => {
             if (id === blog.id) {

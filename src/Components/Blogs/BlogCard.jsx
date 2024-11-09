@@ -28,7 +28,7 @@ const BlogCard = ({ blog }) => {
         <div className="flex items-center text-accent text-xs gap-2 mb-1 sm:mb-2">
           <p>{blog?.date}</p>
           <span className="h-1 w-1 bg-accent rounded-full"></span>
-          <p>5 mins read</p>
+          <p>2 mins read</p>
         </div>
 
         {/* Title */}
