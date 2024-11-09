@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi"; // Import icons for hamburger and close
 import logo from "../../assets/logo.png";
+import { FaRegCircleUser } from "react-icons/fa6";
 import UserProfile from "./UserProfile";
 
 const navItems = [
@@ -31,11 +32,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
   const navigate = useNavigate();
 
+  //for profile toggle
+  const user = JSON.parse(localStorage.getItem("users"));
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <div
-      className={`lg:mx-24 md:mx-16 sm:mx-6 mx-6 my-5 bg-[#1E2226] rounded-md md:rounded-full px-2 py-2 md:border border-gray-400`}
+      className={`lg:mx-24 md:mx-16 sm:mx-6 mx-2 my-5 bg-[#1E2226] rounded-md md:rounded-full px-2 py-2 md:border border-gray-400`}
     >
       <div className="flex items-center justify-between">
         <div
@@ -66,6 +71,21 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
+
+          {/* profie icons when user login */}
+          <div>
+            {user && (
+              <div className="cursor-pointer relative">
+                <FaRegCircleUser
+                  className="text-black text-2xl"
+                  onClick={() => setIsProfileOpen((prev) => !prev)}
+                />
+                {isProfileOpen && (
+                  <UserProfile setIsProfileOpen={setIsProfileOpen} />
+                )}
+              </div>
+            )}
+          </div>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -81,7 +101,7 @@ const Navbar = () => {
 
       {/* Mobile View */}
       {isOpen && (
-        <ul className="mt-4 bg-[#1E2226] rounded-lg md:hidden flex flex-col space-y-2 px-4 py-2 border border-gray-500">
+        <ul className="mt-4 bg-[#1E2226] rounded-lg md:hidden flex flex-col items-start space-y-2 px-4 py-2 border border-gray-500">
           {navItems.map((item, i) => (
             <li key={i}>
               <NavLink
@@ -98,6 +118,19 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
+          <div className="px-4">
+            {user && (
+              <div className="cursor-pointer relative">
+                <FaRegCircleUser
+                  className="text-2xl text-white"
+                  onClick={() => setIsProfileOpen((prev) => !prev)}
+                />
+                {isProfileOpen && (
+                  <UserProfile setIsProfileOpen={setIsProfileOpen} />
+                )}
+              </div>
+            )}
+          </div>
         </ul>
       )}
     </div>

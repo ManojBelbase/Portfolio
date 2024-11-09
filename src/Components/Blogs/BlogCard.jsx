@@ -1,9 +1,13 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
   return (
-    <div className="border border-gray-200 rounded-lg shadow-md w-full sm:w-80 overflow-hidden">
+    <Link
+      to={`/blog/${blog?.id}`}
+      className="border border-gray-200 rounded-lg shadow-md w-full sm:w-80 overflow-hidden"
+    >
       {/* Image Section */}
       <div className="relative h-48 sm:h-56">
         <img
@@ -22,7 +26,7 @@ const BlogCard = ({ blog }) => {
       <div className="p-3 sm:p-4">
         {/* Date and Reading Time */}
         <div className="flex items-center text-accent text-xs gap-2 mb-1 sm:mb-2">
-          <p>{blog?.datePublished}</p>
+          <p>{blog?.date}</p>
           <span className="h-1 w-1 bg-accent rounded-full"></span>
           <p>5 mins read</p>
         </div>
@@ -37,7 +41,7 @@ const BlogCard = ({ blog }) => {
           {blog?.description}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

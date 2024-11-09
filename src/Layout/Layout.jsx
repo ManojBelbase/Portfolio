@@ -25,7 +25,7 @@ const Layout = () => {
   return (
     <div className="bg-black relative">
       <Navbar />
-      <div className="lg:mx-24 md:mx-16 sm:mx-6 mx-6 md:my-10 my-6">
+      <div className="lg:mx-24 md:mx-16 sm:mx-6 mx-2 md:my-10 my-6">
         <Outlet />
       </div>
       <Footer />
@@ -38,7 +38,7 @@ const Layout = () => {
               behavior: "smooth",
             })
           }
-          className="fixed bottom-2 right-4 md:bottom-10 md:right-12 border p-1 md:p-2 rounded-full bg-gray-800 text-white cursor-pointer"
+          className="fixed bottom-8 right-4 md:bottom-10 md:right-12 border p-1 md:p-2 rounded-full bg-gray-800 text-white cursor-pointer"
           aria-label="Scroll to Top"
           title="Scroll To Top"
         >

@@ -2,6 +2,7 @@ import React from "react";
 import BlogsContainer from "../Components/Blogs/BlogsContainer";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { BiEdit } from "react-icons/bi";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Blogs = () => {
         </div>
         {user && (
           <div
-            className="flex items-center gap-2 border py-2 px-3 rounded-md cursor-pointer"
+            className="flex items-center gap-2 border py-2 px-3 rounded-md cursor-pointer border-secondary"
             onClick={() => navigate("/blog/create")}
           >
             <IoMdAddCircleOutline className="text-xl" />
