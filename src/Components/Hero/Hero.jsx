@@ -5,6 +5,8 @@ import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
 import coverSVG from "../../assets/coverSVG.svg";
+import { FiDownloadCloud } from "react-icons/fi";
+
 const Hero = () => {
   // const [follower,setFollower]=useState()
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -30,14 +32,13 @@ const Hero = () => {
         }}
       >
         {/* profile */}
-        <div className="md:h-44 md:w-44 h-28 w-28 md:-top-20 -top-14 left-6 absolute rounded-full border-2 border-secondary p-1">
+        <div className="md:h-44 md:w-44 h-28 w-28 md:-top-20 -top-14 left-6 absolute rounded-full border-2 border-white  profile-background">
           <img
             src={profile}
             alt="profile"
             className="h-full w-full rounded-full object-cover"
           />
         </div>
-
         {/* Profile Info and Social Icon */}
         <div className="md:bottom-10 bottom-5 left-6 right-6 absolute flex sm:flex-row flex-col gap-5 justify-between items-start">
           <div>
@@ -48,12 +49,11 @@ const Hero = () => {
           </div>
           <div>
             {/* Replace with actual social icons */}
-
             <div className="flex items-center gap-2 mt-1">
               {socialLinks.map((link, index) => (
                 <Link
                   key={index}
-                  className={`${link.bgColor} p-2 rounded-full cursor-pointer relative`}
+                  className={`${link.bgColor} p-2 rounded-full cursor-pointer relative shadow-sm shadow-secondary`}
                   onMouseEnter={() => setHoveredIcon(index)}
                   onMouseLeave={() => setHoveredIcon(null)}
                   to={link.path}
@@ -69,6 +69,8 @@ const Hero = () => {
                         "106"
                       ) : link.title === "linkedin" ? (
                         "116"
+                      ) : link.title === "instagram" ? (
+                        "124"
                       ) : (
                         ""
                       )}
@@ -83,6 +85,19 @@ const Hero = () => {
               ))}
             </div>
           </div>
+        </div>
+        {/*download resume */}
+        <div
+          className="absolute md:right-6 md:bottom-36 bottom-5 right-4 border border-secondary 
+             flex items-center px-2 py-1 md:px-3 md:py-2 rounded-sm  cursor-pointer 
+             shadow-sm shadow-secondary hover:shadow-md transition-shadow duration-300 
+             bg-black dark:bg-gray-900 text-black dark:text-white"
+          onClick={() =>
+            window.open("https://github.com/ManojBelbase", "_blank")
+          }
+        >
+          <span className="mr-2 md:text-base text-sm">Resume</span>
+          <FiDownloadCloud className="md:text-xl text-secondary" />
         </div>
       </div>
     </div>

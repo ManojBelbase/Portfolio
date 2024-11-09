@@ -17,3 +17,26 @@ code,
 pre {
   font-family: "Fira Code", monospace;
 }
+
+/* profille background */
+.profile-background {
+  background: linear-gradient(135deg, #7b2cbf, #231942, #118ab2, #ffd60a);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white;
+  /* padding: 20px; */
+  /* border-radius: 8px; */
+}
+
+/* Optional animation for a dynamic gradient effect */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import aboutImage from "../../assets/about.png";
+import Skills from "./Skills";
+import Education from "./Education";
 const AboutMe = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -21,6 +23,7 @@ const AboutMe = () => {
           <div className="border w-[40%] border-secondary"></div>
         </div>
       )}
+      {/* profile descripion */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-20">
         <div className="flex flex-col items-start gap-4 text-accent md:text-base text-sm">
           <h2 className="">Hello, I'm Manoj</h2>
@@ -53,6 +56,8 @@ const AboutMe = () => {
             </button>
           )}
         </div>
+
+        {/* about image */}
         {location.pathname === hideReadMoreBtnRoute && (
           <div className="w-full">
             <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary">
@@ -67,6 +72,8 @@ const AboutMe = () => {
           </div>
         )}
       </div>
+      {/* Skills */}
+      {location.pathname === hideReadMoreBtnRoute && <Education />}
     </div>
   );
 };

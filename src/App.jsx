@@ -12,6 +12,7 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import { ProtectBlog } from "./auth/ProtectBlog";
 import BlogDetailsContainer from "./Components/Blogs/SingleBlogContainer";
 import UpdateBlog from "./Components/Blogs/UpdateBlog";
+import Contact from "./Pages/Contact";
 function App() {
   return (
     <Routes>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/blog/:id" element={<BlogDetailsContainer />} />
         <Route path="/blog/update/:id" element={<UpdateBlog />} />
         <Route

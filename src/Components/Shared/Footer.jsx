@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="py-4 bg-[#1E2226] rounded-t-md text-white">
       <div className=" mx-auto flex md:flex-row flex-col gap-2 items-center justify-between px-6 lg:px-28 md:px-24 sm:px-6">
@@ -10,6 +11,7 @@ const Footer = () => {
           <img
             src={logo}
             alt="Logo"
+            onClick={() => navigate("/")}
             className="h-full w-full object-cover rounded-full cursor-pointer"
           />
         </div>
