@@ -34,8 +34,8 @@ const BlogsContainer = () => {
   return (
     <div
       className={`${
-        location.pathname !== hideBlogsPath && "border md:p-6 p-4"
-      } rounded-md flex flex-col gap-5`}
+        location.pathname !== hideBlogsPath && "border md:p-6 p-2"
+      } rounded-md flex flex-col gap-2 md:gap-5`}
     >
       {/* Display on mobile */}
       <div className="flex items-center justify-between">
@@ -44,7 +44,7 @@ const BlogsContainer = () => {
             <h1 className="sm:text-xl font-semibold text-lg">
               <span className="text-secondary">#</span>recent-blogs
             </h1>
-            <p className="border w-[50%] border-secondary"></p>
+            <p className="hidden md:block border w-[50%] border-secondary"></p>
           </div>
         )}
         {/* View all button on desktop view */}
@@ -68,7 +68,7 @@ const BlogsContainer = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5">
+        <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-2 md:gap-5">
           {getAllBlogs.length > 0 && location.pathname !== hideBlogsPath
             ? getAllBlogs
                 .slice(0, blogsCount)
@@ -82,16 +82,16 @@ const BlogsContainer = () => {
       <div className="md:hidden">
         {location.pathname !== hideBlogsPath && (
           <button
-            className={`border px-2 py-2 rounded-md flex gap-1 items-center`}
+            className={`border px-2 py-1 md:py-2 rounded-sm md:rounded-md flex gap-1 items-center`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => navigate("/blogs")}
           >
-            <span className="">View All</span>
+            <span className="text-sm md:text-base">View All</span>
             <BsArrowRight
               className={`${
                 isHovered ? "-rotate-45" : ""
-              } text-2xl text-secondary transition-transform`}
+              } md:text-2xl text-xl text-secondary transition-transform`}
             />
           </button>
         )}

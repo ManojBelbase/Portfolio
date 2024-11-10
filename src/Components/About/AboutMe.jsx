@@ -12,8 +12,8 @@ const AboutMe = () => {
   return (
     <div
       className={`${
-        location.pathname !== hideReadMoreBtnRoute ? "border p-4 md:p-6  " : ""
-      } rounded-md  flex flex-col gap-5`}
+        location.pathname !== hideReadMoreBtnRoute ? "border p-3 md:p-6  " : ""
+      } rounded-md flex flex-col gap-5`}
     >
       {location.pathname !== hideReadMoreBtnRoute && (
         <div className="flex items-center gap-2">
@@ -59,8 +59,8 @@ const AboutMe = () => {
 
         {/* about image */}
         {location.pathname === hideReadMoreBtnRoute && (
-          <div className="w-full">
-            <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary">
+          <div className="w-full flex items-center justify-center">
+            <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary border profile-background ">
               <div className="rounded-md sm:h-96 w-auto absolute bottom-0 -right-6">
                 <img
                   src={aboutImage}

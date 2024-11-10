@@ -4,7 +4,7 @@ import ProjectContainer from "../Components/Project/ProjectContainer";
 export const Projects = () => {
   return (
     <div>
-      <div className="flex flex-col gap-1 md:mb-6">
+      <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold">
           {" "}
           <span className="text-secondary">/</span>projects

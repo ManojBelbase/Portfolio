@@ -67,6 +67,7 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Enter your name"
+            name="name"
             required
             className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"
           />
@@ -76,6 +77,7 @@ const Contact = () => {
           </label>
           <input
             type="tel"
+            name="mobile"
             placeholder="Enter your mobile number"
             required
             className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -86,6 +88,7 @@ const Contact = () => {
           </label>
           <input
             type="email"
+            name="email"
             placeholder="Enter your email id"
             required
             className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"

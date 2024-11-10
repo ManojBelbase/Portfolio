@@ -22,7 +22,7 @@ const SingleBlogCard = ({ blog }) => {
     : ["Description not available"];
 
   return (
-    <div className="min-h-screen p-2 rounded-md text-gray-100 flex flex-col items-center">
+    <div className="min-h-screen md:p-2 rounded-md text-gray-100 flex flex-col items-center">
       <div className="border max-w-3xl w-full bg-primary rounded-md shadow-lg overflow-hidden relative">
         {/* Blog Image */}
         <div className="h-64 md:h-80 lg:h-96 overflow-hidden">

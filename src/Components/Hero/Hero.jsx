@@ -86,7 +86,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/*download resume */}
+
+        {/*Download resume */}
         <div
           className="absolute md:right-6 md:bottom-36 bottom-5 right-4 border border-secondary 
              flex items-center px-2 py-1 md:px-3 md:py-2 rounded-sm  cursor-pointer 
