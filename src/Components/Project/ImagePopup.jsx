@@ -15,7 +15,7 @@ const ImagePopup = ({ images, onClose }) => {
       onClick={handleClose} // Close the modal if clicked outside
     >
       <div
-        className="border p-4 md:max-w-6xl relative rounded-lg bg-gray-800"
+        className="border p-4 md:max-w-6xl relative rounded-lg bg-gray-900"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
         {/* Screenshots Text */}
