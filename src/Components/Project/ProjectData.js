@@ -1,43 +1,25 @@
 import yt from "../../assets/project/yt.png";
+import nationExplore from "../../assets/project/nationExplore.png";
 const projectData = [
   {
+    id: 1,
     title: "Youtube Clone with API Integration",
-    image: yt,
+    images: [yt, yt, nationExplore],
     description:
-      "This is youtube clone project here i have designed youtube ui and integrate youtube free api",
+      "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
     language: "ReactJs,API",
     githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
     url: "https://youtube-clone-delta-tan.vercel.app/",
   },
   {
-    title: "Youtube Clone with API Integration",
-    image:
-      "https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png",
+    id: 2,
+    title: "Country Explorer with API Integration",
+    images: [nationExplore], // replace this with the actual image variable or URL for the project thumbnail
     description:
-      "This is youtube clone project here i have designed youtube ui and integrate youtube free api",
-    language: "ReactJs,API",
-
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
-  },
-  {
-    title: "Youtube Clone with API Integration",
-    image:
-      "https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png",
-    description:
-      "This is youtube clone project here i have designed youtube ui and integrate youtube free api",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
-    language: "ReactJs,API",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone.git",
-  },
-  {
-    title: "Youtube Clone with API Integration",
-    image:
-      "https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png",
-    description:
-      "This is youtube clone project here i have designed youtube ui and integrate youtube free api",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
-    language: "ReactJs,API",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone.git",
+      "This project displays all countries in the world, with search functionality by name and filters by region using a public API.",
+    language: "ReactJS, API",
+    githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git", // replace with your actual GitHub repo link
+    url: "https://nationexplorer.netlify.app/", // replace with your actual deployed project URL
   },
 ];
 export default projectData;

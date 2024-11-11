@@ -54,6 +54,7 @@ const Login = () => {
         return () => data;
       } catch (error) {
         console.log(error);
+        toast.error("error aayo.");
         setLoading(false);
       }
     } catch (error) {

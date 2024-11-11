@@ -1,35 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaEyeSlash, FaGithub, FaEye } from "react-icons/fa";
+import ImagePopup from "./ImagePopup"; // Import the ImagePopup component
 
 const ProjectCard = ({ item }) => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false); // Control popup visibility
   const location = useLocation();
   const hideContent = "/projects";
+
+  // Function to toggle the visibility of the popup
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
 
   return (
     <div className="border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Project Image */}
-      <div className="h-36 sm:h-48 w-full cursor-pointer">
+      <div
+        onClick={togglePopup} // Toggle popup visibility when clicking on the image
+        className="h-44 sm:h-48 w-full cursor-pointer"
+      >
         <img
-          src={item.image}
+          src={item.images[0]}
           alt={item.title}
           className="h-full w-full object-cover"
         />
       </div>
 
+      {/* Popup Component */}
+      {isPopupVisible && (
+        <ImagePopup images={item.images} onClose={togglePopup} />
+      )}
+
       {/* Project Details */}
       <div className="p-3 sm:p-4 flex flex-col gap-2 sm:gap-3">
-        {/* Project Title */}
         <h3 className="text-base sm:text-lg font-semibold text-white">
           {item.title}
         </h3>
-
-        {/* Project Language */}
         <p className="text-xs sm:text-sm text-secondary font-medium">
           {item.language}
         </p>
-
-        {/* Project Description */}
         <p
           className={`text-xs sm:text-sm text-accent ${
             location.pathname !== hideContent ? "line-clamp-2" : ""

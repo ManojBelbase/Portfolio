@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col-reverse md:flex-col lg:flex-row justify-center rounded-md items-center gap-8 md:mt-8 mt-4 p-4 md:p-8 bg-primary border text-gray-100">
+    <div className="flex flex-col md:flex-col lg:flex-row justify-center rounded-md items-center gap-8 md:mt-8 mt-4 p-4 md:p-8 bg-primary border text-gray-100">
       <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
         <h3 className="text-2xl font-bold flex items-center justify-center lg:justify-start">
           Send me a message <FaRegCommentDots className="ml-2 text-xl" />

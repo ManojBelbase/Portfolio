@@ -13,6 +13,7 @@ import { ProtectBlog } from "./auth/ProtectBlog";
 import BlogDetailsContainer from "./Components/Blogs/SingleBlogContainer";
 import UpdateBlog from "./Components/Blogs/UpdateBlog";
 import Contact from "./Pages/Contact";
+// import ProjectImages from "./Components/Project/ProjectImages";
 function App() {
   return (
     <Routes>
@@ -20,6 +21,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/projects/images/:id" element={<ProjectImages />} /> */}
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog/:id" element={<BlogDetailsContainer />} />
