@@ -19,7 +19,7 @@ const Footer = () => {
         {/* footer credit */}
         <div className="text-center text-sm md:text-base">
           <p className="flex items-center md:space-x-1 text-accent">
-            Designed & developed by
+            Designed & Developed by
             <Link
               to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

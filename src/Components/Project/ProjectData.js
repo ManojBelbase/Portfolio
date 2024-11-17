@@ -1,10 +1,11 @@
 import yt from "../../assets/project/yt.png";
 import nationExplore from "../../assets/project/nationExplore.png";
+import p3 from "../../assets/project/p3.png";
 const projectData = [
   {
     id: 1,
     title: "Youtube Clone with API Integration",
-    images: [yt, yt, nationExplore],
+    images: [yt],
     description:
       "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
     language: "ReactJs,API",
@@ -20,6 +21,16 @@ const projectData = [
     language: "ReactJS, API",
     githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git", // replace with your actual GitHub repo link
     url: "https://nationexplorer.netlify.app/", // replace with your actual deployed project URL
+  },
+  {
+    id: 3,
+    title: "Millennium Photo Printing Services",
+    images: [p3], // replace this with the actual image variable or URL for the project thumbnail
+    description:
+      "This project allows seamless management of products, including adding, editing, and removing, showcasing services like custom framing, banners, and ID cards.",
+    language: "ReactJS, Firebase",
+    githubRepo: "https://github.com/ManojBelbase/Millennium_Photo_Printing.git", // replace with your actual GitHub repo link
+    url: "https://millenniumphoto.netlify.app/", // replace with your actual deployed project URL
   },
 ];
 export default projectData;
