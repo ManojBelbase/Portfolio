@@ -97,7 +97,7 @@ const Hero = () => {
             window.open("https://github.com/ManojBelbase", "_blank")
           }
         >
-          <span className="mr-2 md:text-base text-sm">Resume</span>
+          <span className="mr-2 md:text-base text-sm text-white">Resume</span>
           <FiDownloadCloud className="md:text-xl text-secondary" />
         </div>
       </div>
