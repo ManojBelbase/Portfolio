@@ -1,6 +1,8 @@
 import yt from "../../assets/project/yt.png";
 import nationExplore from "../../assets/project/nationExplore.png";
 import p3 from "../../assets/project/p3.png";
+import p32 from "../../assets/project/p32.png";
+import p33 from "../../assets/project/p33.png";
 import b1 from "../../assets/project/b1.png";
 import b2 from "../../assets/project/b2.png";
 import b3 from "../../assets/project/b3.png";
@@ -19,7 +21,7 @@ const projectData = [
   {
     id: 2,
     title: "Millennium Photo Printing Services",
-    images: [p3], // replace this with the actual image variable or URL for the project thumbnail
+    images: [p3, p32, p33], // replace this with the actual image variable or URL for the project thumbnail
     description:
       "This project allows seamless management of products, including adding, editing, and removing, showcasing services like custom framing, banners, and ID cards.",
     language: "ReactJS, Firebase",
