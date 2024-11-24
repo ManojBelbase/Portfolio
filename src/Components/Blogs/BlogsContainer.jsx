@@ -18,8 +18,10 @@ const BlogsContainer = () => {
     const updateBlogsCount = () => {
       if (window.innerWidth >= 1536) {
         setBlogsCount(4);
+      } else if (window.innerWidth >= 1024) {
+        setBlogsCount(3); // tablet and above show 3
       } else {
-        setBlogsCount(3);
+        setBlogsCount(2); // mobile shows 2 blogs by default
       }
     };
     updateBlogsCount();
@@ -37,7 +39,7 @@ const BlogsContainer = () => {
         location.pathname !== hideBlogsPath && "border md:p-6 p-2"
       } rounded-md flex flex-col gap-2 md:gap-5`}
     >
-      {/* Display on mobile */}
+      {/* Display on mobile and tablet */}
       <div className="flex items-center justify-between">
         {location.pathname !== hideBlogsPath && (
           <div className="w-[80%] flex items-center gap-2">
@@ -47,15 +49,15 @@ const BlogsContainer = () => {
             <p className="hidden md:block border w-[50%] border-secondary"></p>
           </div>
         )}
-        {/* View all button on desktop view */}
+        {/* View all button on desktop and tablet view */}
         {location.pathname !== hideBlogsPath && (
           <button
-            className={`hidden border px-2 py-2 rounded-md md:flex gap-1 items-center`}
+            className={`hidden md:flex border px-2 py-2 rounded-md gap-1 items-center`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => navigate("/blogs")}
           >
-            <span className="">View All</span>
+            <span>View All</span>
             <BsArrowRight
               className={`${
                 isHovered ? "-rotate-45" : ""
@@ -64,7 +66,7 @@ const BlogsContainer = () => {
           </button>
         )}
       </div>
-      {/* Displaying in home and project page */}
+      {/* Displaying blogs in grid on home and project page */}
       {loading ? (
         <Loader />
       ) : (
@@ -78,11 +80,11 @@ const BlogsContainer = () => {
               })}
         </div>
       )}
-      {/* Display view all in mobile view */}
-      <div className="md:hidden">
+      {/* Display view all in mobile and tablet view */}
+      <div className="md:hidden mt-3">
         {location.pathname !== hideBlogsPath && (
           <button
-            className={`border px-2 py-1 md:py-2 rounded-sm md:rounded-md flex gap-1 items-center`}
+            className={`border px-2 py-1 rounded-sm flex gap-1 items-center`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => navigate("/blogs")}

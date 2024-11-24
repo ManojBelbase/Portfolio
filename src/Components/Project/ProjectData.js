@@ -16,12 +16,12 @@ const projectData = [
   {
     id: 1,
     title: "Online Clothing Store",
-    images: [k1, k2, k3, k4, k5], // replace with actual image variables or URLs for the project thumbnail
+    images: [k1, k2, k3, k4, k5, k6], // replace with actual image variables or URLs for the project thumbnail
     description:
-      "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, searching, adding items to the cart, and a seamless checkout process. Admins can manage inventory and orders efficiently.",
+      "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, adding items to the cart, Admins can manage inventory efficiently.",
     language: "ReactJS, NodeJS, MongoDB, ExpressJS",
-    githubRepo: "https://github.com/ManojBelbase/Online_Clothing_Store.git", // replace with your actual GitHub repo link
-    url: "https://onlineclothingstore.netlify.app/", // replace with your actual deployed project URL
+    githubRepo: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual GitHub repo link
+    // url: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual deployed project URL
   },
 
   {

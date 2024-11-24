@@ -11,7 +11,7 @@ const ImagePopup = ({ images, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
+      className="fixed inset-0 mx-4 bg-black bg-opacity-70 flex justify-center items-center z-50 overflow-y-scroll"
       onClick={handleClose} // Close the modal if clicked outside
     >
       <div
@@ -23,14 +23,14 @@ const ImagePopup = ({ images, onClose }) => {
 
         {/* Loop through all images in the 'images' array and display them */}
         <div className="overflow-x-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {images && images.length > 0 ? (
               images.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Project Image ${index + 1}`}
-                  className="sm:w-96 h-36  md:h-full object-cover rounded-lg shadow-md border"
+                  className="sm:w-96   md:h-full object-contain rounded-lg shadow-md border"
                 />
               ))
             ) : (

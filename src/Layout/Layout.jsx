@@ -24,10 +24,12 @@ const Layout = () => {
 
   return (
     <div className="bg-black relative">
-      <Navbar />
+      <div>
+        <Navbar />
 
-      <div className="lg:mx-24 md:mx-16 sm:mx-6 mx-2 md:my-10 my-6">
-        <Outlet />
+        <div className="lg:mx-24 md:mx-16 sm:mx-6 mx-2 md:my-10 my-6">
+          <Outlet />
+        </div>
       </div>
       <Footer />
       {/* scroll to top icon */}

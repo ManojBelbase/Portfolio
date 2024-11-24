@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
 import coverSVG from "../../assets/coverSVG.svg";
 import { FiDownloadCloud } from "react-icons/fi";
+import resume from "../../assets/resume.pdf";
 
 const Hero = () => {
   // const [follower,setFollower]=useState()
@@ -93,9 +94,7 @@ const Hero = () => {
              flex items-center px-2 py-1 md:px-3 md:py-2 rounded-sm  cursor-pointer 
              shadow-sm shadow-secondary hover:shadow-md transition-shadow duration-300 
              bg-black dark:bg-gray-900 text-black dark:text-white"
-          onClick={() =>
-            window.open("https://github.com/ManojBelbase", "_blank")
-          }
+          onClick={() => window.open(resume, "_blank")}
         >
           <span className="mr-2 md:text-base text-sm text-white">Resume</span>
           <FiDownloadCloud className="md:text-xl text-secondary" />
