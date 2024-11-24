@@ -8,9 +8,6 @@ const SingleBlogCard = ({ blog }) => {
   const user = JSON.parse(localStorage.getItem("users"));
   const { deleteBlog, loading } = useDeleteBlog();
 
-  // Log the blog to check the description field
-  console.log(blog);
-
   // Ensure we're properly accessing description and splitting it
   const description = blog?.description[0]; // Assuming the description is stored in an array
   const descriptionParagraphs = description

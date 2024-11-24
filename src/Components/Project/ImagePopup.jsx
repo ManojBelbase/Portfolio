@@ -23,7 +23,7 @@ const ImagePopup = ({ images, onClose }) => {
 
         {/* Loop through all images in the 'images' array and display them */}
         <div className="overflow-x-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {images && images.length > 0 ? (
               images.map((image, index) => (
                 <img

@@ -6,16 +6,22 @@ import p33 from "../../assets/project/p33.png";
 import b1 from "../../assets/project/b1.png";
 import b2 from "../../assets/project/b2.png";
 import b3 from "../../assets/project/b3.png";
+import k1 from "../../assets/project/kapadaHero.png";
+import k2 from "../../assets/project/kapadaDetails.png";
+import k3 from "../../assets/project/kapadaAdmin.png";
+import k4 from "../../assets/project/kapadaAddtocart.png";
+import k5 from "../../assets/project/kapadaCategory.png";
+import k6 from "../../assets/project/kapadaAdminProduct.png";
 const projectData = [
   {
     id: 1,
-    title: "Youtube Clone with API Integration",
-    images: [yt],
+    title: "Online Clothing Store",
+    images: [k1, k2, k3, k4, k5], // replace with actual image variables or URLs for the project thumbnail
     description:
-      "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
-    language: "ReactJs,API",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
-    url: "https://youtube-clone-delta-tan.vercel.app/",
+      "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, searching, adding items to the cart, and a seamless checkout process. Admins can manage inventory and orders efficiently.",
+    language: "ReactJS, NodeJS, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/Online_Clothing_Store.git", // replace with your actual GitHub repo link
+    url: "https://onlineclothingstore.netlify.app/", // replace with your actual deployed project URL
   },
 
   {
@@ -29,7 +35,7 @@ const projectData = [
     url: "https://millenniumphoto.netlify.app/", // replace with your actual deployed project URL
   },
   {
-    id: 4,
+    id: 3,
     title: "Blogging Website with Full CRUD Operations",
     images: [b1, b2, b3], // replace this with the actual image variable or URL for the project thumbnail
     description:
@@ -46,6 +52,16 @@ const projectData = [
     language: "ReactJS, API",
     githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git", // replace with your actual GitHub repo link
     url: "https://nationexplorer.netlify.app/", // replace with your actual deployed project URL
+  },
+  {
+    id: 5,
+    title: "Youtube Clone with API Integration",
+    images: [yt],
+    description:
+      "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
+    language: "ReactJs,API",
+    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
+    url: "https://youtube-clone-delta-tan.vercel.app/",
   },
 ];
 export default projectData;
