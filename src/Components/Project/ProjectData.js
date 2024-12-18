@@ -12,6 +12,7 @@ import k3 from "../../assets/project/kapadaAdmin.png";
 import k4 from "../../assets/project/kapadaAddtocart.png";
 import k5 from "../../assets/project/kapadaCategory.png";
 import k6 from "../../assets/project/kapadaAdminProduct.png";
+import edu from "../../assets/project/edu.png";
 const projectData = [
   {
     id: 1,
@@ -62,6 +63,16 @@ const projectData = [
     language: "ReactJs,API",
     githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
     url: "https://youtube-clone-delta-tan.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "College Website",
+    images: [edu],
+    description:
+      " A fully responsive and user-friendly college website built with ReactJS",
+    language: "ReactJS",
+    githubRepo: "https://github.com/ManojBelbase/Edusity",
+    url: "https://edusityuniversity1.netlify.app/",
   },
 ];
 export default projectData;
