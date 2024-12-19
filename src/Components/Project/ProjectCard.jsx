@@ -17,13 +17,14 @@ const ProjectCard = ({ item }) => {
     <div className="border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Project Image */}
       <div
-        onClick={togglePopup} // Toggle popup visibility when clicking on the image
+        onDoubleClick={togglePopup} // Toggle popup visibility when clicking on the image
         className="h-44 sm:h-48 w-full cursor-pointer"
       >
         <img
           src={item.images[0]}
           alt={item.title}
           className="h-full w-full object-contain"
+          title="Double-click to view screenshots"
         />
       </div>
 
