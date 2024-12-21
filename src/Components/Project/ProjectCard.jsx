@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaEyeSlash, FaGithub, FaEye } from "react-icons/fa";
 import ImagePopup from "./ImagePopup"; // Import the ImagePopup component
-
+import { motion } from "framer-motion";
 const ProjectCard = ({ item }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false); // Control popup visibility
   const location = useLocation();
@@ -14,17 +14,17 @@ const ProjectCard = ({ item }) => {
   };
 
   return (
-    <div className="border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <motion.div className="border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Project Image */}
       <div
-        onDoubleClick={togglePopup} // Toggle popup visibility when clicking on the image
+        onClick={togglePopup} // Toggle popup visibility when clicking on the image
         className="h-44 sm:h-48 w-full cursor-pointer"
       >
         <img
           src={item.images[0]}
           alt={item.title}
           className="h-full w-full object-contain"
-          title="Double-click to view screenshots"
+          title="Click to view screenshots"
         />
       </div>
 
@@ -77,7 +77,7 @@ const ProjectCard = ({ item }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -3,14 +3,14 @@ import { BsArrowRight } from "react-icons/bs";
 import { useNavigate, useLocation } from "react-router-dom";
 import projectData from "./ProjectData";
 import ProjectCard from "./ProjectCard";
-
+import { motion } from "framer-motion";
 const ProjectContainer = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const hideViewMoreBtn = "/projects";
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div
+    <motion.div
       className={`${
         location.pathname !== hideViewMoreBtn ? "border md:p-6 p-2" : ""
       } rounded-md  flex flex-col gap-2 md:gap-5 `}
@@ -72,7 +72,7 @@ const ProjectContainer = () => {
           </button>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

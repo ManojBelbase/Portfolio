@@ -13,6 +13,9 @@ import k4 from "../../assets/project/kapadaAddtocart.png";
 import k5 from "../../assets/project/kapadaCategory.png";
 import k6 from "../../assets/project/kapadaAdminProduct.png";
 import edu from "../../assets/project/edu.png";
+import voting1 from "../../assets/project/voting1.png";
+import voting2 from "../../assets/project/voting2.png";
+import voting3 from "../../assets/project/voting3.png";
 const projectData = [
   {
     id: 1,
@@ -37,6 +40,16 @@ const projectData = [
   },
   {
     id: 3,
+    title: "Online Voting System",
+    images: [voting1, voting2, voting3], // replace with actual image variables or URLs
+    description:
+      "A platform for users to sign in, view candidates, and vote. Features live vote counting, password management, and admin-controlled candidate table without voting access.",
+    language: "ReactJS, NodeJS, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/online_voting", // replace with your actual GitHub repo link
+  },
+
+  {
+    id: 4,
     title: "Blogging Website with Full CRUD Operations",
     images: [b1, b2, b3], // replace this with the actual image variable or URL for the project thumbnail
     description:
@@ -45,7 +58,7 @@ const projectData = [
     githubRepo: "https://github.com/ManojBelbase/Blogging_website.git", // replace with your actual GitHub repo link
   },
   {
-    id: 4,
+    id: 5,
     title: "Country Explorer with API Integration",
     images: [nationExplore], // replace this with the actual image variable or URL for the project thumbnail
     description:
@@ -54,16 +67,7 @@ const projectData = [
     githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git", // replace with your actual GitHub repo link
     url: "https://nationexplorer.netlify.app/", // replace with your actual deployed project URL
   },
-  {
-    id: 5,
-    title: "Youtube Clone with API Integration",
-    images: [yt],
-    description:
-      "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
-    language: "ReactJs,API",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
-    url: "https://youtube-clone-delta-tan.vercel.app/",
-  },
+
   {
     id: 6,
     title: "College Website",
@@ -73,6 +77,16 @@ const projectData = [
     language: "ReactJS",
     githubRepo: "https://github.com/ManojBelbase/Edusity",
     url: "https://edusityuniversity1.netlify.app/",
+  },
+  {
+    id: 7,
+    title: "Youtube Clone with API Integration",
+    images: [yt],
+    description:
+      "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
+    language: "ReactJs,API",
+    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
+    url: "https://youtube-clone-delta-tan.vercel.app/",
   },
 ];
 export default projectData;
