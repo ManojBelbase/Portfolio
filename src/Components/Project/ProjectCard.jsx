@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaEyeSlash, FaGithub, FaEye } from "react-icons/fa";
+import { FaGithub, FaEye } from "react-icons/fa";
 import ImagePopup from "./ImagePopup";
 import { motion } from "framer-motion";
 import { FaLink, FaLinkSlash } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
 
 const ProjectCard = ({ item }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -73,7 +74,7 @@ const ProjectCard = ({ item }) => {
             className="flex items-center gap-1 sm:gap-2 text-center text-white border-secondary border py-1 px-3 sm:px-4 transition-colors duration-200 rounded-md text-xs sm:text-sm"
           >
             <span>Github</span>
-            <FaGithub className="text-lg sm:text-xl" />
+            <FiGithub className="text-lg sm:text-xl" />
           </Link>
 
           <Link
@@ -83,7 +84,7 @@ const ProjectCard = ({ item }) => {
           >
             Live
             {item?.url ? (
-              <FaLink className="text-sm sm:text-xl" />
+              <FaLink className="text-lg sm:text-xl" />
             ) : (
               <FaLinkSlash className="text-lg sm:text-xl" />
             )}

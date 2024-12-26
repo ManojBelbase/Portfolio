@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import aboutImage from "../../assets/about.png";
-import Skills from "./Skills";
 import Education from "./Education";
 const AboutMe = () => {
   const navigate = useNavigate();
