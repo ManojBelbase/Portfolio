@@ -45,7 +45,8 @@ const projectData = [
     description:
       "A platform for users to sign in, view candidates, and vote. Features live vote counting, password management, and admin-controlled candidate table without voting access.",
     language: "ReactJS, NodeJS, MongoDB, ExpressJS",
-    githubRepo: "https://github.com/ManojBelbase/online_voting", // replace with your actual GitHub repo link
+    githubRepo: "https://github.com/ManojBelbase/online_voting",
+    url: "https://votingappnepal.netlify.app/",
   },
 
   {
