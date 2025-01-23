@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
-import aboutImage from "../../assets/about.png";
+import aboutImage from "../../assets/about1.png";
 import Education from "./Education";
 const AboutMe = () => {
   const navigate = useNavigate();
@@ -60,11 +60,11 @@ const AboutMe = () => {
         {location.pathname === hideReadMoreBtnRoute && (
           <div className="w-full flex items-center justify-center">
             <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary border profile-background ">
-              <div className="rounded-md sm:h-96 w-auto absolute bottom-0 -right-6">
+              <div className="rounded-md sm:h-96 h-[400px] w-auto absolute bottom-0 -right-6">
                 <img
                   src={aboutImage}
                   alt=""
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover bg-transparent"
                 />
               </div>
             </div>
