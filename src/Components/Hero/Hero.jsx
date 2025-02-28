@@ -54,7 +54,7 @@ const Hero = () => {
               {socialLinks.map((link, index) => (
                 <Link
                   key={index}
-                  className={`${link.bgColor} p-2 rounded-full cursor-pointer relative shadow-sm shadow-secondary`}
+                  className={`${link.bgColor} p-1 md:p-2 rounded-full cursor-pointer relative shadow-sm shadow-secondary`}
                   onMouseEnter={() => setHoveredIcon(index)}
                   onMouseLeave={() => setHoveredIcon(null)}
                   to={link.path}
@@ -73,7 +73,7 @@ const Hero = () => {
                       ) : link.title === "instagram" ? (
                         "124"
                       ) : (
-                        ""
+                        "15"
                       )}
                     </span>
                   )}

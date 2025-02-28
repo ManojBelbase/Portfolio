@@ -60,7 +60,7 @@ const AboutMe = () => {
         {location.pathname === hideReadMoreBtnRoute && (
           <div className="w-full flex items-center justify-center">
             <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary border profile-background ">
-              <div className="rounded-md sm:h-96 h-[400px] w-auto absolute bottom-0 -right-6">
+              <div className="rounded-md h-[320px] md:h-[400px] w-auto absolute bottom-0 -right-6">
                 <img
                   src={aboutImage}
                   alt=""

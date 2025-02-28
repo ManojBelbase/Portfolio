@@ -5,9 +5,8 @@ import {
   FaUserPlus,
 } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
-import { MdEmail } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
-
+import { SiMedium } from "react-icons/si";
 const socialLinks = [
   {
     title: "facebook",
@@ -44,6 +43,12 @@ const socialLinks = [
     ),
     bgColor: "bg-gray-300",
     path: "https://www.instagram.com/manojbelbasay/",
+  },
+  {
+    title: "medium",
+    icon: <SiMedium className="text-black sm:text-xl hover:text-[#000200]" />,
+    bgColor: "bg-gray-300",
+    path: "https://medium.com/@manojbelbase",
   },
 ];
 export default socialLinks;
