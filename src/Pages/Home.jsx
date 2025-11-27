@@ -7,7 +7,7 @@ import ContactHome from "../Components/Contact/ContactHome";
 // import Loader from "../Components/Loader/Loader";
 const Home = () => {
   return (
-    <div className="flex flex-col gap-4 relative">
+    <div className="flex flex-col gap-4 relative max-w-[1700px] mx-auto">
       <Hero />
       <AboutMe />
       <ProjectContainer />

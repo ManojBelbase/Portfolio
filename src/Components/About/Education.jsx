@@ -8,9 +8,9 @@ const Education = () => {
       duration: "2018 - 2020",
     },
     {
-      degree: "Bachelor of Computer Applications (BCA)",
+      degree: "Bachelor of Computer Application (BCA)",
       institution: "Butwal Kalika Campus",
-      duration: "2020 - Present",
+      duration: "2021 - 2025",
     },
   ];
 

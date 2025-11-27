@@ -1,4 +1,3 @@
-import yt from "../../assets/project/yt.png";
 import nationExplore from "../../assets/project/nationExplore.png";
 import p3 from "../../assets/project/p3.png";
 import p32 from "../../assets/project/p32.png";
@@ -12,11 +11,26 @@ import k3 from "../../assets/project/kapadaAdmin.png";
 import k4 from "../../assets/project/kapadaAddtocart.png";
 import k5 from "../../assets/project/kapadaCategory.png";
 import k6 from "../../assets/project/kapadaAdminProduct.png";
-import edu from "../../assets/project/edu.png";
+import foodLogin from "../../assets/project/foodLogin.png";
+import food1 from "../../assets/project/food1.png";
+import food2 from "../../assets/project/food2.png";
+import food3 from "../../assets/project/food3.png";
+import food4 from "../../assets/project/food4.png";
+import food5 from "../../assets/project/food5.png";
 import voting1 from "../../assets/project/voting1.png";
 import voting2 from "../../assets/project/voting2.png";
 import voting3 from "../../assets/project/voting3.png";
 const projectData = [
+  {
+    id: 1,
+    title: "Online Food ordering system",
+    images: [foodLogin, food1, food2, food3, food4, food5],
+    description:
+      "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, order tracking, and user control for smooth operation of the food ordering system",
+    language: "ReactJS, MantineUI, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/online-food-ordering-admin",
+    url: "https://online-food-ordering-admin.vercel.app/",
+  },
   {
     id: 1,
     title: "Online Clothing Store",
@@ -24,8 +38,7 @@ const projectData = [
     description:
       "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, adding items to the cart, Admins can manage inventory efficiently.",
     language: "ReactJS, NodeJS, MongoDB, ExpressJS",
-    githubRepo: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual GitHub repo link
-    // url: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual deployed project URL
+    githubRepo: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual GitHub
   },
 
   {
@@ -61,33 +74,12 @@ const projectData = [
   {
     id: 5,
     title: "Country Explorer with API Integration",
-    images: [nationExplore], // replace this with the actual image variable or URL for the project thumbnail
+    images: [nationExplore],
     description:
       "This project displays all countries in the world, with search functionality by name and filters by region using a public API.",
     language: "ReactJS, API",
     githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git", // replace with your actual GitHub repo link
     url: "https://nationexplorer.netlify.app/", // replace with your actual deployed project URL
-  },
-
-  {
-    id: 6,
-    title: "College Website",
-    images: [edu],
-    description:
-      " A fully responsive and user-friendly college website built with ReactJS",
-    language: "ReactJS",
-    githubRepo: "https://github.com/ManojBelbase/Edusity",
-    url: "https://edusityuniversity1.netlify.app/",
-  },
-  {
-    id: 7,
-    title: "Youtube Clone with API Integration",
-    images: [yt],
-    description:
-      "This is a YouTube clone project where I designed the YouTube UI and integrated a free YouTube API",
-    language: "ReactJs,API",
-    githubRepo: "https://github.com/ManojBelbase/Youtube_clone",
-    url: "https://youtube-clone-delta-tan.vercel.app/",
   },
 ];
 export default projectData;
