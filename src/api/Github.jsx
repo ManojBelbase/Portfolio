@@ -1,5 +1,5 @@
 // GitHub.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 const username = "manojbelbase";
 import { IoReloadOutline } from "react-icons/io5";

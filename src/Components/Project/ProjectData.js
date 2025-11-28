@@ -20,21 +20,36 @@ import food5 from "../../assets/project/food5.png";
 import voting1 from "../../assets/project/voting1.png";
 import voting2 from "../../assets/project/voting2.png";
 import voting3 from "../../assets/project/voting3.png";
+
+import devGPT1 from "../../assets/project/devGPT1.png";
+import devGPT2 from "../../assets/project/devGPT2.png";
+import devGPT3 from "../../assets/project/devGPT3.png";
+import devGPT4 from "../../assets/project/devGPT4.png";
 const projectData = [
   {
     id: 1,
     title: "Online Food ordering system",
     images: [foodLogin, food1, food2, food3, food4, food5],
     description:
-      "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, order tracking, and user control for smooth operation of the food ordering system",
+      "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, and user control for smooth operation of the food ordering system.",
     language: "ReactJS, MantineUI, MongoDB, ExpressJS",
     githubRepo: "https://github.com/ManojBelbase/online-food-ordering-admin",
     url: "https://online-food-ordering-admin.vercel.app/",
   },
   {
-    id: 1,
+    id: 2,
+    title: "devGPT- AI Chatbot for Developers",
+    images: [devGPT1, devGPT2, devGPT3, devGPT4],
+    description:
+      "A powerful, fast and developer-focused AI chatbot that helps you write, debug, explain and refactor code instantly, Khalti payment integration. signin with google and dark and light mode support.",
+    language: "ReactJS, Tailwind, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/devGPT",
+    url: "https://devgptai.vercel.app",
+  },
+  {
+    id: 3,
     title: "Online Clothing Store",
-    images: [k1, k2, k3, k4, k5, k6], // replace with actual image variables or URLs for the project thumbnail
+    images: [k1, k2, k3, k4, k5, k6],
     description:
       "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, adding items to the cart, Admins can manage inventory efficiently.",
     language: "ReactJS, NodeJS, MongoDB, ExpressJS",

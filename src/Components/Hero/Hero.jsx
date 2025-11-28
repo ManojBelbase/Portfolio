@@ -72,8 +72,10 @@ const Hero = () => {
                         "116"
                       ) : link.title === "instagram" ? (
                         "124"
+                      ) : link.title === "medium" ? (
+                        "4"
                       ) : (
-                        "15"
+                        "2"
                       )}
                     </span>
                   )}

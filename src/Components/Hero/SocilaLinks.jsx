@@ -1,19 +1,10 @@
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaYoutube,
-  FaUserPlus,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { RiNpmjsFill } from "react-icons/ri";
+
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { RiInstagramFill } from "react-icons/ri";
 import { SiMedium } from "react-icons/si";
 const socialLinks = [
-  {
-    title: "facebook",
-    icon: <FaFacebookF className="text-black sm:text-lg hover:text-blue-600" />,
-    bgColor: "bg-gray-300",
-    path: "https://www.facebook.com/manojbelbasay",
-  },
   {
     title: "github",
     icon: (
@@ -22,6 +13,7 @@ const socialLinks = [
     bgColor: "bg-gray-300",
     path: "https://github.com/ManojBelbase",
   },
+
   {
     title: "linkedin",
     icon: (
@@ -29,6 +21,18 @@ const socialLinks = [
     ),
     bgColor: "bg-gray-300",
     path: "https://www.linkedin.com/in/manojbelbasay/",
+  },
+  {
+    title: "npm",
+    icon: <RiNpmjsFill className="text-black hover:text-red-500" />,
+    bgColor: "bg-gray-300",
+    path: "https://www.npmjs.com/~manojbelbase",
+  },
+  {
+    title: "medium",
+    icon: <SiMedium className="text-black sm:text-xl hover:text-[#000200]" />,
+    bgColor: "bg-gray-300",
+    path: "https://medium.com/@manojbelbase",
   },
   {
     title: "youtube",
@@ -43,12 +47,6 @@ const socialLinks = [
     ),
     bgColor: "bg-gray-300",
     path: "https://www.instagram.com/manojbelbasay/",
-  },
-  {
-    title: "medium",
-    icon: <SiMedium className="text-black sm:text-xl hover:text-[#000200]" />,
-    bgColor: "bg-gray-300",
-    path: "https://medium.com/@manojbelbase",
   },
 ];
 export default socialLinks;
