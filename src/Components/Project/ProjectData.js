@@ -17,6 +17,8 @@ import food2 from "../../assets/project/food2.png";
 import food3 from "../../assets/project/food3.png";
 import food4 from "../../assets/project/food4.png";
 import food5 from "../../assets/project/food5.png";
+import foodDash from "../../assets/project/foodDash.png";
+
 import voting1 from "../../assets/project/voting1.png";
 import voting2 from "../../assets/project/voting2.png";
 import voting3 from "../../assets/project/voting3.png";
@@ -33,7 +35,7 @@ const projectData = [
   {
     id: 1,
     title: "Online Food ordering system",
-    images: [foodLogin, food1, food2, food3, food4, food5],
+    images: [foodDash, foodLogin, food1, food2, food3, food4, food5],
     description:
       "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, and user control for smooth operation of the food ordering system.",
     language: "ReactJS, MantineUI, MongoDB, ExpressJS",
