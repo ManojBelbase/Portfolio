@@ -25,6 +25,10 @@ import devGPT1 from "../../assets/project/devGPT1.png";
 import devGPT2 from "../../assets/project/devGPT2.png";
 import devGPT3 from "../../assets/project/devGPT3.png";
 import devGPT4 from "../../assets/project/devGPT4.png";
+
+import caseoPro1 from "../../assets/project/caseoPro1.png";
+import caseoPro2 from "../../assets/project/caseoPro2.png";
+import caseoPro3 from "../../assets/project/caseoPro3.png";
 const projectData = [
   {
     id: 1,
@@ -38,6 +42,17 @@ const projectData = [
   },
   {
     id: 2,
+    title: "CaseoPro – iGaming & Digital Marketing Platform",
+    images: [caseoPro2, caseoPro1, caseoPro3],
+    description:
+      " A powerful and scalable iGaming and digital marketing platform offering smart strategies, modern technology, engaging user experiences, and tools that help gaming brands grow and succeed.",
+    language: "Nextjs, Tailwind, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/caseopro",
+    url: "https://caseopro.vercel.app/",
+  },
+
+  {
+    id: 3,
     title: "devGPT- AI Chatbot for Developers",
     images: [devGPT1, devGPT2, devGPT3, devGPT4],
     description:
@@ -47,7 +62,7 @@ const projectData = [
     url: "https://devgptai.vercel.app",
   },
   {
-    id: 3,
+    id: 4,
     title: "Online Clothing Store",
     images: [k1, k2, k3, k4, k5, k6],
     description:
@@ -57,7 +72,7 @@ const projectData = [
   },
 
   {
-    id: 2,
+    id: 5,
     title: "Millennium Photo Printing Services",
     images: [p3, p32, p33], // replace this with the actual image variable or URL for the project thumbnail
     description:
@@ -67,7 +82,7 @@ const projectData = [
     url: "https://millenniumphoto.netlify.app/", // replace with your actual deployed project URL
   },
   {
-    id: 3,
+    id: 6,
     title: "Online Voting System",
     images: [voting1, voting2, voting3], // replace with actual image variables or URLs
     description:
@@ -78,7 +93,7 @@ const projectData = [
   },
 
   {
-    id: 4,
+    id: 7,
     title: "Blogging Website with Full CRUD Operations",
     images: [b1, b2, b3], // replace this with the actual image variable or URL for the project thumbnail
     description:
@@ -87,7 +102,7 @@ const projectData = [
     githubRepo: "https://github.com/ManojBelbase/Blogging_website.git", // replace with your actual GitHub repo link
   },
   {
-    id: 5,
+    id: 8,
     title: "Country Explorer with API Integration",
     images: [nationExplore],
     description:
