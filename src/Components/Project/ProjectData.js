@@ -52,7 +52,7 @@ const projectData = [
     title: "BhojanNepal - Food Ordering Website",
     images: [bhojan1, bhojan2, bhojan3],
     description:
-      "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, and user control for smooth operation of the food ordering system.",
+      "A modern and responsive food ordering website that allows customers to browse restaurants, explore menus, and place orders with ease. Built with a clean UI, search functionality, and restaurant-specific pages.",
     language: "NextJs, Tailwind CSS, MongoDB, ExpressJS",
     githubRepo: "https://github.com/ManojBelbase/online-food-ordering-frontend",
     url: "https://bhojannepal.vercel.app/",
@@ -62,7 +62,7 @@ const projectData = [
     title: "CaseoPro – iGaming & Digital Marketing Platform",
     images: [caseoPro2, caseoPro1, caseoPro3],
     description:
-      " A powerful and scalable iGaming and digital marketing platform offering smart strategies, modern technology, engaging user experiences, and tools that help gaming brands grow and succeed.",
+      " A powerful and scalable iGaming and digital marketing platform offering smart strategies, engaging user experiences, and tools that help gaming brands grow and succeed.",
     language: "Nextjs, Tailwind, MongoDB, ExpressJS",
     githubRepo: "https://github.com/ManojBelbase/caseopro",
     url: "https://caseopro.vercel.app/",

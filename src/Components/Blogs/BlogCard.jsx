@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
@@ -6,7 +5,7 @@ const BlogCard = ({ blog }) => {
     <>
       <Link
         to={`/blog/${blog?.id}`}
-        className="border border-gray-200 rounded-lg shadow-md w-full sm:w-80 xl:w-72 overflow-hidden"
+        className="border border-gray-200 rounded-lg shadow-md w-full sm:w-80 xl:w-[300px] overflow-hidden"
       >
         {/* Image Section */}
         <div className="relative h-48 sm:h-56">

@@ -1,14 +1,12 @@
-import React from "react";
 import BlogsContainer from "../Components/Blogs/BlogsContainer";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import { BiEdit } from "react-icons/bi";
 
 const Blogs = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("users"));
   return (
-    <div>
+    <div className="max-w-[1700px] mx-auto">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-1 ">
           <h1 className="text-3xl font-bold">
