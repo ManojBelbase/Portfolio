@@ -17,6 +17,11 @@ import food2 from "../../assets/project/food2.png";
 import food3 from "../../assets/project/food3.png";
 import food4 from "../../assets/project/food4.png";
 import food5 from "../../assets/project/food5.png";
+
+import bhojan1 from "../../assets/project/bhojan1.png";
+import bhojan2 from "../../assets/project/bhojan2.png";
+import bhojan3 from "../../assets/project/bhojan3.png";
+
 import foodDash from "../../assets/project/foodDash.png";
 
 import voting1 from "../../assets/project/voting1.png";
@@ -41,6 +46,16 @@ const projectData = [
     language: "ReactJS, MantineUI, MongoDB, ExpressJS",
     githubRepo: "https://github.com/ManojBelbase/online-food-ordering-admin",
     url: "https://online-food-ordering-admin.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "BhojanNepal - Food Ordering Website",
+    images: [bhojan1, bhojan2, bhojan3],
+    description:
+      "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, and user control for smooth operation of the food ordering system.",
+    language: "NextJs, Tailwind CSS, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/online-food-ordering-frontend",
+    url: "https://bhojannepal.vercel.app/",
   },
   {
     id: 2,
