@@ -39,7 +39,7 @@ import caseoPro3 from "../../assets/project/caseoPro3.png";
 const projectData = [
   {
     id: 1,
-    title: "Online Food ordering system",
+    title: "Online Food ordering system(Admin)",
     images: [foodDash, foodLogin, food1, food2, food3, food4, food5],
     description:
       "A clean and responsive admin panel featuring separate admin and restaurant logins, an interactive dashboard, category management, food item management, and user control for smooth operation of the food ordering system.",
@@ -48,8 +48,8 @@ const projectData = [
     url: "https://online-food-ordering-admin.vercel.app/",
   },
   {
-    id: 1,
-    title: "BhojanNepal - Food Ordering Website",
+    id: 2,
+    title: "Food Ordering Website",
     images: [bhojan1, bhojan2, bhojan3],
     description:
       "A modern and responsive food ordering website that allows customers to browse restaurants, explore menus, and place orders with ease. Built with a clean UI, search functionality, and restaurant-specific pages.",
@@ -58,7 +58,7 @@ const projectData = [
     url: "https://bhojannepal.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "CaseoPro – iGaming & Digital Marketing Platform",
     images: [caseoPro2, caseoPro1, caseoPro3],
     description:
@@ -69,7 +69,7 @@ const projectData = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "devGPT- AI Chatbot for Developers",
     images: [devGPT1, devGPT2, devGPT3, devGPT4],
     description:
@@ -77,15 +77,6 @@ const projectData = [
     language: "ReactJS, Tailwind, MongoDB, ExpressJS",
     githubRepo: "https://github.com/ManojBelbase/devGPT",
     url: "https://devgptai.vercel.app",
-  },
-  {
-    id: 4,
-    title: "Online Clothing Store",
-    images: [k1, k2, k3, k4, k5, k6],
-    description:
-      "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, adding items to the cart, Admins can manage inventory efficiently.",
-    language: "ReactJS, NodeJS, MongoDB, ExpressJS",
-    githubRepo: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual GitHub
   },
 
   {
@@ -100,6 +91,15 @@ const projectData = [
   },
   {
     id: 6,
+    title: "Online Clothing Store",
+    images: [k1, k2, k3, k4, k5, k6],
+    description:
+      "An e-commerce platform offering a wide range of clothing for men, women, and kids. Features include product browsing, adding items to the cart, Admins can manage inventory efficiently.",
+    language: "ReactJS, NodeJS, MongoDB, ExpressJS",
+    githubRepo: "https://github.com/ManojBelbase/kapadaa-pasal.git", // replace with your actual GitHub
+  },
+  {
+    id: 7,
     title: "Online Voting System",
     images: [voting1, voting2, voting3], // replace with actual image variables or URLs
     description:
@@ -109,24 +109,24 @@ const projectData = [
     url: "https://votingappnepal.netlify.app/",
   },
 
-  {
-    id: 7,
-    title: "Blogging Website with Full CRUD Operations",
-    images: [b1, b2, b3], // replace this with the actual image variable or URL for the project thumbnail
-    description:
-      "A complete blogging platform where users can view blogs, and admins can perform   create, read, update, and delete blogs.",
-    language: "ReactJS, NodeJS, MongoDB, ExpressJS",
-    githubRepo: "https://github.com/ManojBelbase/Blogging_website.git", // replace with your actual GitHub repo link
-  },
-  {
-    id: 8,
-    title: "Country Explorer with API Integration",
-    images: [nationExplore],
-    description:
-      "This project displays all countries in the world, with search functionality by name and filters by region using a public API.",
-    language: "ReactJS, API",
-    githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git", // replace with your actual GitHub repo link
-    url: "https://nationexplorer.netlify.app/", // replace with your actual deployed project URL
-  },
+  // {
+  //   id: 8,
+  //   title: "Blogging Website with Full CRUD Operations",
+  //   images: [b1, b2, b3], // replace this with the actual image variable or URL for the project thumbnail
+  //   description:
+  //     "A complete blogging platform where users can view blogs, and admins can perform   create, read, update, and delete blogs.",
+  //   language: "ReactJS, NodeJS, MongoDB, ExpressJS",
+  //   githubRepo: "https://github.com/ManojBelbase/Blogging_website.git", // replace with your actual GitHub repo link
+  // },
+  // {
+  //   id: 9,
+  //   title: "Country Explorer with API Integration",
+  //   images: [nationExplore],
+  //   description:
+  //     "This project displays all countries in the world, with search functionality by name and filters by region using a public API.",
+  //   language: "ReactJS, API",
+  //   githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git",
+  //   url: "https://nationexplorer.netlify.app/",
+  // },
 ];
 export default projectData;
