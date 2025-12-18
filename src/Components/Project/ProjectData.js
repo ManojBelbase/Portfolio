@@ -1,10 +1,7 @@
-import nationExplore from "../../assets/project/nationExplore.png";
 import p3 from "../../assets/project/p3.png";
 import p32 from "../../assets/project/p32.png";
 import p33 from "../../assets/project/p33.png";
-import b1 from "../../assets/project/b1.png";
-import b2 from "../../assets/project/b2.png";
-import b3 from "../../assets/project/b3.png";
+
 import k1 from "../../assets/project/kapadaHero.png";
 import k2 from "../../assets/project/kapadaDetails.png";
 import k3 from "../../assets/project/kapadaAdmin.png";
@@ -36,6 +33,13 @@ import devGPT4 from "../../assets/project/devGPT4.png";
 import caseoPro1 from "../../assets/project/caseoPro1.png";
 import caseoPro2 from "../../assets/project/caseoPro2.png";
 import caseoPro3 from "../../assets/project/caseoPro3.png";
+
+
+import quickGPT1 from "../../assets/project/quickGPT1.png";
+import quickGPT2 from "../../assets/project/quickGPT2.png";
+import quickGPT3 from "../../assets/project/quickGPT3.png";
+import quickGPT4 from "../../assets/project/quickGPT4.png";
+
 const projectData = [
   {
     id: 1,
@@ -57,6 +61,17 @@ const projectData = [
     githubRepo: "https://github.com/ManojBelbase/online-food-ordering-frontend",
     url: "https://bhojannepal.vercel.app/",
   },
+  {
+  id: 3,
+  title: "QuickGPT - AI Writing & Image Tools",
+  images: [quickGPT1, quickGPT2, quickGPT3, quickGPT4], 
+  description:
+    "QuickGPT is an all-in-one AI platform for generating articles, blog titles, images, and background edits. Features include multi-step forms, real-time previews, user authentication, and subscription-based usage limits.",
+  language: "ReactJS, TailwindCSS, Tanstack Query, Clerk, Express, Neon ",
+  githubRepo: "https://github.com/ManojBelbase/quickGPT",
+  url: "https://quickgptai.vercel.app/",
+},
+
   {
     id: 3,
     title: "CaseoPro – iGaming & Digital Marketing Platform",
@@ -109,24 +124,6 @@ const projectData = [
     url: "https://votingappnepal.netlify.app/",
   },
 
-  // {
-  //   id: 8,
-  //   title: "Blogging Website with Full CRUD Operations",
-  //   images: [b1, b2, b3], // replace this with the actual image variable or URL for the project thumbnail
-  //   description:
-  //     "A complete blogging platform where users can view blogs, and admins can perform   create, read, update, and delete blogs.",
-  //   language: "ReactJS, NodeJS, MongoDB, ExpressJS",
-  //   githubRepo: "https://github.com/ManojBelbase/Blogging_website.git", // replace with your actual GitHub repo link
-  // },
-  // {
-  //   id: 9,
-  //   title: "Country Explorer with API Integration",
-  //   images: [nationExplore],
-  //   description:
-  //     "This project displays all countries in the world, with search functionality by name and filters by region using a public API.",
-  //   language: "ReactJS, API",
-  //   githubRepo: "https://github.com/ManojBelbase/REST-Countries-API.git",
-  //   url: "https://nationexplorer.netlify.app/",
-  // },
+
 ];
 export default projectData;
