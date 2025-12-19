@@ -33,7 +33,7 @@ const Layout = () => {
       </div>
       <Footer />
       {/* scroll to top icon */}
-      {isVisible && (
+      {/* {isVisible && (
         <Link
           onClick={() =>
             window.scrollTo({
@@ -41,13 +41,13 @@ const Layout = () => {
               behavior: "smooth",
             })
           }
-          className="fixed bottom-8 right-4 md:bottom-10 md:right-12 border p-[6px] md:p-2 rounded-full bg-gray-800 text-white cursor-pointer"
+          className="fixed bottom-8 right-4 md:bottom-10 md:left-16 w-fit border p-[6px] md:p-2 rounded-full bg-gray-800 text-white cursor-pointer"
           aria-label="Scroll to Top"
           title="Scroll To Top"
         >
           <BiArrowToTop className="md:text-2xl text-xl text-secondary" />
         </Link>
-      )}
+      )} */}
     </div>
   );
 };

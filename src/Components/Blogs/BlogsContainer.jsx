@@ -36,7 +36,7 @@ const BlogsContainer = () => {
   return (
     <div
       className={`${
-        location.pathname !== hideBlogsPath && "border md:p-6 p-2"
+        location.pathname !== hideBlogsPath && "border border-gray-700 rounded-2xl md:p-6 p-2"
       } rounded-md flex flex-col gap-2 md:gap-5`}
     >
       {/* Display on mobile and tablet */}
@@ -52,7 +52,7 @@ const BlogsContainer = () => {
         {/* View all button on desktop and tablet view */}
         {location.pathname !== hideBlogsPath && (
           <button
-            className={`hidden md:flex border px-2 py-2 rounded-md gap-1 items-center`}
+            className={`hidden md:flex border border-gray-700 px-2 py-2 rounded-md gap-1 items-center`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => navigate("/blogs")}
@@ -81,10 +81,10 @@ const BlogsContainer = () => {
         </div>
       )}
       {/* Display view all in mobile and tablet view */}
-      <div className="md:hidden mt-3">
+      <div className="md:hidden mt-2 mb-2">
         {location.pathname !== hideBlogsPath && (
           <button
-            className={`border px-2 py-1 rounded-sm flex gap-1 items-center`}
+            className={`border border-gray-700 px-2 py-1 rounded-md flex gap-1 items-center`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => navigate("/blogs")}

@@ -5,7 +5,7 @@ const BlogCard = ({ blog }) => {
     <>
       <Link
         to={`/blog/${blog?.id}`}
-        className="border border-gray-200 rounded-lg shadow-md w-full sm:w-80 xl:w-[300px] overflow-hidden"
+        className="border border-gray-700 rounded-lg shadow-md w-full sm:w-80 xl:w-[300px] overflow-hidden"
       >
         {/* Image Section */}
         <div className="relative h-48 sm:h-56">

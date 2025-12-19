@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaGithub, FaEye } from "react-icons/fa";
+import {  FaEye } from "react-icons/fa";
 import ImagePopup from "./ImagePopup";
 import { motion } from "framer-motion";
 import { FaLink, FaLinkSlash } from "react-icons/fa6";
@@ -26,7 +26,7 @@ const ProjectCard = ({ item }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3 }}
-      className="border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      className="border border-gray-700 rounded-2xl shadow-md overflow-hidden hover:shadow-lg shadow-gray-700 transition-shadow duration-300"
     >
       <div
         onClick={togglePopup}

@@ -14,7 +14,7 @@ const Contact = () => {
     setResult("Sending...");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "b5963aaf-94a0-4c47-b25c-ffce53abca93");
+    formData.append("access_key", "8748d7fb-1c12-4d8f-8177-cb325b09a221");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row justify-center rounded-md items-center gap-8 md:mt-8 mt-4 p-4 md:p-8 bg-primary border text-gray-100">
+    <div className="flex flex-col md:flex-col lg:flex-row justify-center  items-center gap-8 md:mt-8 mt-4 p-4 md:p-8 bg-primary border  border-gray-700 rounded-2xl text-gray-100">
       <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
         <h3 className="text-2xl font-bold flex items-center justify-center lg:justify-start">
           Send me a message <FaRegCommentDots className="ml-2 text-xl" />
@@ -46,7 +46,7 @@ const Contact = () => {
         <ul className="space-y-4">
           <li className="flex items-center gap-2 text-gray-300">
             <FaEnvelope className="text-secondary" />
-            <span>manoj.belbasay@gmail.com</span>
+            <span>manojbelbase56@gmail.com</span>
           </li>
           <li className="flex items-center gap-2 text-gray-300">
             <FaPhone className="text-secondary" />
@@ -59,7 +59,7 @@ const Contact = () => {
         </ul>
       </div>
 
-      <div className="lg:w-1/2 bg-gray-900 md:p-8 p-4 shadow-lg rounded-sm">
+      <div className="lg:w-1/2 bg-gray-900 md:p-8 p-4 shadow-lg rounded-2xl">
         <form onSubmit={onSubmit} className="space-y-2">
           <label className="block text-sm font-medium text-gray-300">
             Your Name
@@ -69,7 +69,7 @@ const Contact = () => {
             placeholder="Enter your name"
             name="name"
             required
-            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
           />
 
           <label className="block text-sm font-medium text-gray-300">
@@ -80,7 +80,7 @@ const Contact = () => {
             name="mobile"
             placeholder="Enter your mobile number"
             required
-            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
           />
 
           <label className="block text-sm font-medium text-gray-300">
@@ -91,7 +91,7 @@ const Contact = () => {
             name="email"
             placeholder="Enter your email id"
             required
-            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
           />
 
           <label className="block text-sm font-medium text-gray-300">
@@ -102,12 +102,12 @@ const Contact = () => {
             placeholder="Enter your message"
             rows={6}
             required
-            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
           ></textarea>
 
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-secondary text-white font-semibold rounded-sm hover:bg-secondary focus:outline-none focus:ring-2 focus:bg-secondary"
+            className="w-full py-2 px-4 bg-secondary text-white font-semibold rounded-md hover:bg-secondary focus:outline-none focus:ring-2 focus:bg-secondary"
           >
             Submit Now
           </button>

@@ -12,8 +12,8 @@ const ProjectContainer = () => {
   return (
     <motion.div
       className={`${
-        location.pathname !== hideViewMoreBtn ? "border md:p-6 p-2" : ""
-      } rounded-md  flex flex-col gap-2 md:gap-5 `}
+        location.pathname !== hideViewMoreBtn ? "border rounded-2xl border-gray-700 md:p-6 p-2" : ""
+      } rounded-md flex flex-col gap-2 md:gap-5 `}
     >
       <div className="flex items-center justify-between w-full">
         {location.pathname !== hideViewMoreBtn && (
@@ -29,7 +29,7 @@ const ProjectContainer = () => {
         <div className="hidden md:block">
           {location.pathname !== hideViewMoreBtn && (
             <button
-              className={`border px-2 py-2 rounded-md flex gap-1 items-center `}
+              className={`border border-gray-700 px-2 py-2 rounded-md flex gap-1 items-center `}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               onClick={() => navigate("/projects")}
@@ -58,7 +58,7 @@ const ProjectContainer = () => {
       <div className="md:hidden block">
         {location.pathname !== hideViewMoreBtn && (
           <button
-            className={`border px-2 py-1 md:py-2 rounded-sm md:rounded-md flex gap-1 items-center `}
+            className={`border border-gray-700 px-2 py-1 md:py-2 rounded-md md:rounded-xl flex gap-1 items-center `}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => navigate("/projects")}

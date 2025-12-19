@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import aboutImage from "../../assets/about1.png";
@@ -11,8 +11,8 @@ const AboutMe = () => {
   return (
     <div
       className={`${
-        location.pathname !== hideReadMoreBtnRoute ? "border p-3 md:p-6  " : ""
-      } rounded-md flex flex-col gap-5`}
+        location.pathname !== hideReadMoreBtnRoute ? "border border-gray-700 p-3 md:p-6  " : ""
+      } rounded-2xl flex flex-col gap-5`}
     >
       {location.pathname !== hideReadMoreBtnRoute && (
         <div className="flex items-center gap-2">
@@ -27,10 +27,7 @@ const AboutMe = () => {
         <div className="flex flex-col items-start gap-4 text-accent md:text-base text-sm">
           <h2 className="">Hello, I'm Manoj</h2>
           <p className="">
-            I'm a self-taught MERN stack developer with a passion for both
-            coding and design. I specialize in creating responsive websites from
-            scratch, transforming concepts into seamless, modern web
-            experiences.
+         I'm a self-taught full-stack developer passionate about crafting beautiful, high-performance websites from the ground up. With expertise in React, Next, Node.js, Express, Tailwind CSS, and modern frontend/back-end technologies, I specialize in turning creative ideas into responsive, user-friendly web experiences that work flawlessly across devices.
           </p>
           <p>
             Over the past year, I've enjoyed bringing clients' visions to life
@@ -41,7 +38,7 @@ const AboutMe = () => {
           </p>
           {location.pathname !== hideReadMoreBtnRoute && (
             <button
-              className={`border px-2 py-2 rounded-md text-white flex items-center gap-2 transition-transform `}
+              className={`border border-gray-700 px-2 py-2 rounded-md text-white flex items-center gap-2 transition-transform `}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               onClick={() => navigate("/about")}
@@ -59,7 +56,7 @@ const AboutMe = () => {
         {/* about image */}
         {location.pathname === hideReadMoreBtnRoute && (
           <div className="w-full flex items-center justify-center">
-            <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary border profile-background ">
+            <div className="sm:h-80 h-60 rounded-t-full w-80 sm:w-96  relative bg-secondary border profile-background border-gray-700">
               <div className="rounded-md h-[320px] md:h-[400px] w-auto absolute bottom-0 -right-6">
                 <img
                   src={aboutImage}

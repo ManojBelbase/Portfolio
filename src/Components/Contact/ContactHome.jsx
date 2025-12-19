@@ -9,7 +9,7 @@ const ContactHome = () => {
   const navigate = useNavigate();
 
   // handle copy email
-  const email = "manoj.belbasay@gmail.com";
+  const email = "manojbelbase56@gmail.com";
   const handleCopyEmail = () => {
     try {
       navigator.clipboard.writeText(email);
@@ -20,7 +20,7 @@ const ContactHome = () => {
   };
 
   // handle call on whatsApp
-  const phoneNumber = "9864415071"; // Example for India; replace with your number
+  const phoneNumber = "9864415071"; 
   const message = encodeURIComponent(
     "Hello, I would like to get in touch with you!"
   );
@@ -29,7 +29,7 @@ const ContactHome = () => {
   };
 
   return (
-    <div className="border p-4 md:p-6 rounded-md  flex flex-col gap-5">
+    <div className="border border-gray-700 p-4 md:p-6 rounded-2xl  flex flex-col gap-5">
       {/* contact heading */}
       <div className="flex items-center gap-2">
         <h1 className="text-xl font-semibold">
@@ -67,7 +67,7 @@ const ContactHome = () => {
 
         {/* Call on WhatsApp */}
         <button
-          className="border border-gray-600 px-3 py-2 sm:px-4 sm:py-2 rounded-md w-full sm:w-auto inline-flex items-center gap-2 text-gray-300 shadow-md bg-primary hover:bg-gray-900 transition duration-200 cursor-pointer"
+          className="border border-gray-700 px-3 py-2 sm:px-4 sm:py-2 rounded-md w-full sm:w-auto inline-flex items-center gap-2 text-gray-300 shadow-md bg-primary hover:bg-gray-900 transition duration-200 cursor-pointer"
           onClick={handleWhatsAppCall}
         >
           <span className="sm:hidden text-sm">Call</span> {/* Mobile text */}

@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`lg:mx-24 md:mx-16 sm:mx-6 mx-2 my-5 bg-[#1E2226] rounded-md md:rounded-full px-2 py-2 md:border border-gray-400`}
+      className={`lg:mx-24 md:mx-16 sm:mx-6 mx-2 my-5 bg-[#1E2226] rounded-md md:rounded-full px-2 py-2 md:border border-gray-700`}
     >
       <div className="flex items-center justify-between">
         <div

@@ -15,7 +15,7 @@ const ImagePopup = ({ images, onClose }) => {
       onClick={handleClose} // Close the modal if clicked outside
     >
       <div
-        className="border p-4 md:max-w-6xl relative rounded-lg bg-gray-900"
+        className="border border-gray-700 rounded-2xl p-4 md:max-w-6xl relative  bg-gray-900"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
         {/* Screenshots Text */}
@@ -30,7 +30,7 @@ const ImagePopup = ({ images, onClose }) => {
                   key={index}
                   src={image}
                   alt={`Project Image ${index + 1}`}
-                  className="sm:w-96   md:h-full object-contain rounded-lg shadow-md border"
+                  className="sm:w-96   md:h-full object-contain rounded-lg shadow-md border border-gray-700"
                 />
               ))
             ) : (
