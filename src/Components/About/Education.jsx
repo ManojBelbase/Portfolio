@@ -15,7 +15,7 @@ const Education = () => {
   ];
 
   return (
-    <div className="mt-10 px-4">
+    <div className="mt-10 px-2">
       {/* Section Header */}
       <div className="flex items-center text-2xl font-bold mb-6">
         <span className="text-secondary text-3xl mr-2">#</span>
@@ -27,11 +27,11 @@ const Education = () => {
         {educationDetails.map((edu, index) => (
           <div
             key={index}
-            className="bg-neutral-800 text-white p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="bg-neutral-800 text-white p-4 sm:p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             {/* Degree and Institution */}
-            <h2 className="text-xl font-semibold">{edu.degree}</h2>
-            <p className="text-sm text-secondary">{edu.institution}</p>
+            <h2 className="text-lg sm:text-xl font-semibold">{edu.degree}</h2>
+            <p className="text-xs sm:text-sm text-secondary">{edu.institution}</p>
 
             {/* Duration */}
             <p className="mt-2 text-sm text-accent">{edu.duration}</p>

@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Hero Video / Image */}
       <div className="overflow-hidden w-full">
         {/* Desktop video */}
-        <div className="w-full hidden md:block overflow-hidden border rounded-t-2xl border-gray-700">
+        <div className="w-full hidden md:block overflow-hidden border rounded-t-md sm:rounded-t-2xl border-gray-700">
           <video
             src={cover}
             autoPlay
@@ -30,14 +30,14 @@ const Hero = () => {
         </div>
 
         {/* Mobile fallback */}
-        <div className="w-full block border rounded-t-2xl border-gray-700 md:hidden overflow-hidden">
+        <div className="w-full block border rounded-t-md border-gray-700 md:hidden overflow-hidden">
           <img src={coverImg} alt="cover" className="rounded-t-md w-full" />
         </div>
       </div>
 
       {/* Hero Container */}
       <div
-        className="h-52 border rounded-b-3xl p-3 relative border-gray-600"
+        className="h-52 border rounded-b-md sm:rounded-b-3xl p-3 relative border-gray-600"
         style={{ boxShadow: "0 -1px 8px rgba(255, 255, 255, 0.3)" }}
       >
         {/* Profile Image */}

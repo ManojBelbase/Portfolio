@@ -26,7 +26,7 @@ const ProjectCard = ({ item }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3 }}
-      className="border border-gray-700 rounded-2xl shadow-md overflow-hidden hover:shadow-lg shadow-gray-700 transition-shadow duration-300"
+      className="border border-gray-700 rounded-md sm:rounded-2xl shadow-md overflow-hidden hover:shadow-lg shadow-gray-700 transition-shadow duration-300"
     >
       <div
         onClick={togglePopup}

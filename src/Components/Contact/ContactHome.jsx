@@ -29,7 +29,7 @@ const ContactHome = () => {
   };
 
   return (
-    <div className="border border-gray-700 p-4 md:p-6 rounded-2xl  flex flex-col gap-5">
+    <div className="border border-gray-700 p-4 md:p-6 rounded-md sm:rounded-2xl  flex flex-col gap-5">
       {/* contact heading */}
       <div className="flex items-center gap-2">
         <h1 className="text-xl font-semibold">

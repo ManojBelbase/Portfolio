@@ -12,7 +12,7 @@ const ProjectContainer = () => {
   return (
     <motion.div
       className={`${
-        location.pathname !== hideViewMoreBtn ? "border rounded-2xl border-gray-700 md:p-6 p-2" : ""
+        location.pathname !== hideViewMoreBtn ? "border sm:rounded-2xl border-gray-700 md:p-6 p-2" : ""
       } rounded-md flex flex-col gap-2 md:gap-5 `}
     >
       <div className="flex items-center justify-between w-full">

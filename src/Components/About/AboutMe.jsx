@@ -12,7 +12,7 @@ const AboutMe = () => {
     <div
       className={`${
         location.pathname !== hideReadMoreBtnRoute ? "border border-gray-700 p-3 md:p-6  " : ""
-      } rounded-2xl flex flex-col gap-5`}
+      } rounded-md sm:rounded-2xl flex flex-col gap-5`}
     >
       {location.pathname !== hideReadMoreBtnRoute && (
         <div className="flex items-center gap-2">
