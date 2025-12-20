@@ -6,8 +6,7 @@ import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
 import { FiDownloadCloud } from "react-icons/fi";
-import resume from "../../assets/resume.pdf";
-
+const RESUME_URL = "https://drive.google.com/file/d/1WdkQulJZ3cE11XKd08UJzsxeuGORT1Ow/view?usp=drive_link";
 const Hero = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
@@ -21,7 +20,6 @@ const Hero = () => {
             src={cover}
             autoPlay
             muted
-            loop
             playsInline
             preload="auto" 
             poster={coverImg} 
@@ -98,16 +96,16 @@ const Hero = () => {
         </div>
 
         {/* Download Resume */}
-        <div
-          className="absolute md:right-6 rounded-md md:bottom-36 bottom-5 right-4 border border-secondary 
-            flex items-center px-2 py-1 md:px-3 md:py-2 cursor-pointer 
-            shadow-sm shadow-secondary hover:shadow-md transition-shadow duration-300 
-            bg-black dark:bg-gray-900 text-black dark:text-white"
-          onClick={() => window.open(resume, "_blank")}
-        >
-          <span className="mr-2 md:text-base text-sm text-white">Resume</span>
-          <FiDownloadCloud className="md:text-xl text-secondary" />
-        </div>
+      <div
+  className="absolute md:right-6 md:bottom-36 bottom-5 right-4 rounded-md
+    border border-secondary flex items-center px-2 py-1 md:px-3 md:py-2
+    cursor-pointer shadow-sm shadow-secondary hover:shadow-md transition
+    bg-black dark:bg-gray-900 text-white"
+  onClick={() => window.open(RESUME_URL, "_blank", "noopener,noreferrer")}
+>
+  <span className="mr-2 md:text-base text-sm">Resume</span>
+  <FiDownloadCloud className="md:text-xl text-secondary" />
+</div>
       </div>
     </div>
   );
