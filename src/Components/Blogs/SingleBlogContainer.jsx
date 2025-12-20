@@ -12,7 +12,7 @@ const SingleBlogContainer = () => {
     <div>
       <div>
         <div
-          className="border px-2 py-1 text-white hover:border-secondary rounded-sm inline-flex items-center gap-2 my-2 cursor-pointer"
+          className="border border-gray-700 px-2 py-1 text-white hover:border-secondary rounded-md inline-flex items-center gap-2 my-2 cursor-pointer"
           onClick={() => navigate("/blogs")}
         >
           <IoArrowBack className="text-2xl" />

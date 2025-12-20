@@ -33,12 +33,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row justify-center  items-center gap-8 md:mt-8 mt-4 p-4 md:p-8 bg-primary border  border-gray-700 rounded-2xl text-gray-100">
-      <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+    <div className="flex flex-col md:flex-col lg:flex-row justify-center  items-center gap-8 md:mt-8 mt-4 p-2 md:p-8 bg-primary border  border-gray-700 rounded-md sm:rounded-2xl text-gray-100">
+      <div className="lg:w-1/2 space-y-6 text-center lg:text-left p-2">
         <h3 className="text-2xl font-bold flex items-center justify-center lg:justify-start">
           Send me a message <FaRegCommentDots className="ml-2 text-xl" />
         </h3>
-        <p className="text-gray-400 md:text-base text-sm">
+        <p className="text-gray-400 md:text-base text-sm  text-justify">
           Feel free to reach out through the contact form or find my contact
           information below. I'm always open to feedback, questions, and
           suggestions. Let's connect!
@@ -59,7 +59,7 @@ const Contact = () => {
         </ul>
       </div>
 
-      <div className="lg:w-1/2 bg-gray-900 md:p-8 p-4 shadow-lg rounded-2xl">
+      <div className="lg:w-1/2 bg-gray-900 md:p-8 p-3 sm:p-4 shadow-lg rounded-md sm:rounded-2xl">
         <form onSubmit={onSubmit} className="space-y-2">
           <label className="block text-sm font-medium text-gray-300">
             Your Name

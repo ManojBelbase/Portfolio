@@ -1,5 +1,4 @@
-import React from "react";
-import { FaEdit, FaTrashAlt } from "react-icons/fa"; // Import icons
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import useDeleteBlog from "./useDeleteBlog";
 
@@ -8,8 +7,7 @@ const SingleBlogCard = ({ blog }) => {
   const user = JSON.parse(localStorage.getItem("users"));
   const { deleteBlog, loading } = useDeleteBlog();
 
-  // Ensure we're properly accessing description and splitting it
-  const description = blog?.description[0]; // Assuming the description is stored in an array
+  const description = blog?.description[0]; 
   const descriptionParagraphs = description
     ? description.split("\\n").map((paragraph, index) => (
         <p key={index} className="mb-4 text-accent">
@@ -20,7 +18,7 @@ const SingleBlogCard = ({ blog }) => {
 
   return (
     <div className="min-h-screen md:p-2 rounded-md text-gray-100 flex flex-col items-center">
-      <div className="border max-w-3xl w-full bg-primary rounded-md shadow-lg overflow-hidden relative">
+      <div className="border border-gray-700  max-w-3xl w-full bg-primary rounded-md sm:rounded-2xl shadow-lg overflow-hidden relative">
         {/* Blog Image */}
         <div className="h-64 md:h-80 lg:h-96 overflow-hidden">
           <img
