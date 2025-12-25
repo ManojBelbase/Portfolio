@@ -39,8 +39,21 @@ import quickGPT1 from "../../assets/project/quickGPT1.png";
 import quickGPT2 from "../../assets/project/quickGPT2.png";
 import quickGPT3 from "../../assets/project/quickGPT3.png";
 import quickGPT4 from "../../assets/project/quickGPT4.png";
+import quickGPT5 from "../../assets/project/quickGPT5.png";
+import quickGPT6 from "../../assets/project/quickGPT6.png";
 
 const projectData = [
+{
+  id: 3,
+  title: "QuickGPT – All-in-One AI Content Platform",
+  images: [quickGPT1, quickGPT5,quickGPT2, quickGPT3, quickGPT4, quickGPT6],
+  description:
+    "QuickGPT is an all-in-one AI platform for generating social media posts, articles, summaries, code, and AI images with real-time previews, prompt-based inputs, authentication, and subscription-based usage limits.",
+  language:
+    "ReactJS, TailwindCSS, TanStack Query, Clerk, Express.js, Neon (PostgreSQL)",
+  githubRepo: "https://github.com/ManojBelbase/quickGPT",
+  url: "https://quickgptai.vercel.app/",
+},
   {
     id: 1,
     title: "Online Food ordering system(Admin)",
@@ -61,16 +74,7 @@ const projectData = [
     githubRepo: "https://github.com/ManojBelbase/online-food-ordering-frontend",
     url: "https://bhojannepal.vercel.app/",
   },
-  {
-  id: 3,
-  title: "QuickGPT - AI Writing & Image Tools",
-  images: [quickGPT1, quickGPT2, quickGPT3, quickGPT4], 
-  description:
-    "QuickGPT is an all-in-one AI platform for generating articles, blog titles, images, and background edits. Features include multi-step forms, real-time previews, user authentication, and subscription-based usage limits.",
-  language: "ReactJS, TailwindCSS, Tanstack Query, Clerk, Express, Neon ",
-  githubRepo: "https://github.com/ManojBelbase/quickGPT",
-  url: "https://quickgptai.vercel.app/",
-},
+
 
   {
     id: 3,
