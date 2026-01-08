@@ -5,6 +5,8 @@ import { BsArrowRight } from "react-icons/bs";
 import myContext from "../../context/myContext";
 import Loader from "../Loader/Loader";
 
+import { motion } from "framer-motion";
+
 const BlogsContainer = () => {
   const { getAllBlogs, loading } = useContext(myContext);
   const [isHovered, setIsHovered] = useState(false);
@@ -34,10 +36,13 @@ const BlogsContainer = () => {
   }, []);
 
   return (
-    <div
-      className={`${
-        location.pathname !== hideBlogsPath && "border border-gray-700 rounded-2xl md:p-6 p-2"
-      } rounded-md flex flex-col gap-2 md:gap-5`}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className={`${location.pathname !== hideBlogsPath && "border border-gray-700 rounded-lg sm:rounded-xl md:p-6 p-2"
+        } rounded-md flex flex-col gap-2 md:gap-5`}
     >
       {/* Display on mobile and tablet */}
       <div className="flex items-center justify-between">
@@ -59,9 +64,8 @@ const BlogsContainer = () => {
           >
             <span>View All</span>
             <BsArrowRight
-              className={`${
-                isHovered ? "-rotate-45" : ""
-              } text-2xl text-secondary transition-transform`}
+              className={`${isHovered ? "-rotate-45" : ""
+                } text-2xl text-secondary transition-transform`}
             />
           </button>
         )}
@@ -73,11 +77,11 @@ const BlogsContainer = () => {
         <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-2 md:gap-5">
           {getAllBlogs.length > 0 && location.pathname !== hideBlogsPath
             ? getAllBlogs
-                .slice(0, blogsCount)
-                .map((blog, i) => <BlogCard key={i} blog={blog} />)
+              .slice(0, blogsCount)
+              .map((blog, i) => <BlogCard key={i} blog={blog} />)
             : getAllBlogs.map((blog, key) => {
-                return <BlogCard key={key} blog={blog} />;
-              })}
+              return <BlogCard key={key} blog={blog} />;
+            })}
         </div>
       )}
       {/* Display view all in mobile and tablet view */}
@@ -91,14 +95,13 @@ const BlogsContainer = () => {
           >
             <span className="text-sm md:text-base">View All</span>
             <BsArrowRight
-              className={`${
-                isHovered ? "-rotate-45" : ""
-              } md:text-2xl text-xl text-secondary transition-transform`}
+              className={`${isHovered ? "-rotate-45" : ""
+                } md:text-2xl text-xl text-secondary transition-transform`}
             />
           </button>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

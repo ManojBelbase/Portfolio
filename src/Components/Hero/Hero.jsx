@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import cover from "../../assets/cover.mp4";
 import coverImg from "../../assets/cover.png";
@@ -6,14 +7,40 @@ import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
 import { FiDownloadCloud } from "react-icons/fi";
+
 const RESUME_URL = "https://drive.google.com/file/d/1WdkQulJZ3cE11XKd08UJzsxeuGORT1Ow/view?usp=drive_link";
+
 const Hero = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <div className="flex flex-col shadow-sm border-[#262626]">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="flex flex-col shadow-sm border-[#262626]"
+    >
       {/* Hero Video / Image */}
-      <div className="overflow-hidden w-full">
+      <motion.div variants={itemVariants} className="overflow-hidden w-full">
         {/* Desktop video */}
         <div className="w-full hidden md:block overflow-hidden border rounded-t-md sm:rounded-t-2xl border-gray-700">
           <video
@@ -21,8 +48,9 @@ const Hero = () => {
             autoPlay
             muted
             playsInline
-            preload="auto" 
-            poster={coverImg} 
+            loop
+            preload="auto"
+            poster={coverImg}
             className="w-full h-full object-cover will-change-transform"
           />
         </div>
@@ -31,30 +59,36 @@ const Hero = () => {
         <div className="w-full block border rounded-t-md border-gray-700 md:hidden overflow-hidden">
           <img src={coverImg} alt="cover" className="rounded-t-md w-full" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Hero Container */}
-      <div
+      <motion.div
+        variants={itemVariants}
         className="h-52 border rounded-b-md sm:rounded-b-3xl p-3 relative border-gray-600"
         style={{ boxShadow: "0 -1px 8px rgba(255, 255, 255, 0.3)" }}
       >
         {/* Profile Image */}
-        <div className="md:h-44 md:w-44 h-28 w-28 md:-top-20 -top-14 left-6 absolute rounded-full border-2 border-white profile-background overflow-hidden">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="md:h-44 md:w-44 h-28 w-28 md:-top-20 -top-14 left-6 absolute rounded-full border-2 border-white profile-background overflow-hidden"
+        >
           <img
             src={profile}
             alt="profile"
             className="h-full w-full rounded-full object-cover"
           />
-        </div>
+        </motion.div>
 
         {/* Profile Info and Social Icons */}
         <div className="md:bottom-10 bottom-5 left-6 right-6 absolute flex sm:flex-row flex-col gap-5 justify-between items-start">
-          <div>
+          <motion.div variants={itemVariants}>
             <h1 className="font-medium md:text-2xl text-xl">Manoj Belbase</h1>
             <p className="text-xs font-normal text-accent">Full Stack Developer</p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={itemVariants}>
             <div className="flex items-center gap-2 mt-1">
               {socialLinks.map((link, index) => (
                 <Link
@@ -92,22 +126,25 @@ const Hero = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Download Resume */}
-      <div
-  className="absolute md:right-6 md:bottom-36 bottom-5 right-4 rounded-md
-    border border-secondary flex items-center px-2 py-1 md:px-3 md:py-2
-    cursor-pointer shadow-sm shadow-secondary hover:shadow-md transition
-    bg-black dark:bg-gray-900 text-white"
-  onClick={() => window.open(RESUME_URL, "_blank", "noopener,noreferrer")}
->
-  <span className="mr-2 md:text-base text-sm">Resume</span>
-  <FiDownloadCloud className="md:text-xl text-secondary" />
-</div>
-      </div>
-    </div>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="absolute md:right-6 md:bottom-36 bottom-5 right-4 rounded-md
+            border border-secondary flex items-center px-2 py-1 md:px-3 md:py-2
+            cursor-pointer shadow-sm shadow-secondary hover:shadow-md transition
+            bg-black dark:bg-gray-900 text-white"
+          onClick={() => window.open(RESUME_URL, "_blank", "noopener,noreferrer")}
+        >
+          <span className="mr-2 md:text-base text-sm">Resume</span>
+          <FiDownloadCloud className="md:text-xl text-secondary" />
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

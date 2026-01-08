@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../Components/Shared/Navbar";
 import Footer from "../Components/Shared/Footer";
-import { BiArrowToTop } from "react-icons/bi";
 
 const Layout = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
@@ -23,31 +21,14 @@ const Layout = () => {
   }, []);
 
   return (
-    <div className="bg-black relative">
-      <div>
-        <Navbar />
+    <div className="bg-black relative min-h-screen">
+      <Navbar />
 
-        <div className="lg:mx-24 md:mx-16 sm:mx-6 mx-2 md:my-10 my-6">
-          <Outlet />
-        </div>
+      <div className="sm:pt-24 pt-20 lg:mx-24 md:mx-16 sm:mx-6 mx-2 md:my-10 my-6">
+        <Outlet />
       </div>
       <Footer />
-      {/* scroll to top icon */}
-      {/* {isVisible && (
-        <Link
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            })
-          }
-          className="fixed bottom-8 right-4 md:bottom-10 md:left-16 w-fit border p-[6px] md:p-2 rounded-full bg-gray-800 text-white cursor-pointer"
-          aria-label="Scroll to Top"
-          title="Scroll To Top"
-        >
-          <BiArrowToTop className="md:text-2xl text-xl text-secondary" />
-        </Link>
-      )} */}
+
     </div>
   );
 };
