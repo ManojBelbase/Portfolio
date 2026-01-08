@@ -18,17 +18,11 @@ const ProtectedRoute = lazy(() => import("./auth/ProtectedRoute"));
 const ProtectBlog = lazy(() => import("./auth/ProtectBlog"));
 const BlogDetailsContainer = lazy(() => import("./Components/Blogs/SingleBlogContainer"));
 const UpdateBlog = lazy(() => import("./Components/Blogs/UpdateBlog"));
-
-// Loading fallback
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-primary">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-secondary"></div>
-  </div>
-);
+const PageLoader = lazy(() => import("./Components/Loader/PageLoader"));
 
 function App() {
   return (
-    <Suspense fallback={<LoadingSpinner />}>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
