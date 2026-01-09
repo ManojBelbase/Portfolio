@@ -7,8 +7,7 @@ import socialLinks from "./SocilaLinks";
 import { Link } from "react-router-dom";
 import GitHub from "../../api/Github";
 import { FiDownloadCloud } from "react-icons/fi";
-
-const RESUME_URL = "https://drive.google.com/file/d/1WdkQulJZ3cE11XKd08UJzsxeuGORT1Ow/view?usp=drive_link";
+import { RESUME_URL } from "../../const/const";
 
 const Hero = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -48,7 +47,6 @@ const Hero = () => {
             autoPlay
             muted
             playsInline
-            loop
             preload="auto"
             poster={coverImg}
             className="w-full h-full object-cover will-change-transform"
